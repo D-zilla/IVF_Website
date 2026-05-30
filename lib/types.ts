@@ -127,11 +127,20 @@ export interface HeroFormContent {
 
 // ---------- specialty card grid ----------
 
+export type SpecialtyIcon =
+  | "embryo"
+  | "syringe"
+  | "microInjection"
+  | "heartHands"
+  | "snowflake"
+  | "droplet";
+
 export interface SpecialtyCardContent {
   title: string;
   description?: string;
   ctaLabel: string;
   href: string;
+  icon?: SpecialtyIcon;
   iconSrc?: string;
 }
 

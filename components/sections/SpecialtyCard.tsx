@@ -1,13 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { SpecialtyCardContent } from "@/lib/types";
-import { DropletIcon } from "@/components/ui/icons";
+import type { SpecialtyCardContent, SpecialtyIcon } from "@/lib/types";
+import {
+  DropletIcon,
+  EmbryoIcon,
+  SyringeIcon,
+  MicroInjectionIcon,
+  HeartHandsIcon,
+  SnowflakeIcon,
+} from "@/components/ui/icons";
 
 export interface SpecialtyCardProps {
   item: SpecialtyCardContent;
 }
 
+const iconMap: Record<SpecialtyIcon, (p: React.SVGProps<SVGSVGElement>) => React.ReactElement> = {
+  embryo: EmbryoIcon,
+  syringe: SyringeIcon,
+  microInjection: MicroInjectionIcon,
+  heartHands: HeartHandsIcon,
+  snowflake: SnowflakeIcon,
+  droplet: DropletIcon,
+};
+
 export function SpecialtyCard({ item }: SpecialtyCardProps) {
+  const Icon = iconMap[item.icon ?? "droplet"];
   return (
     <Link
       href={item.href}
@@ -24,7 +41,7 @@ export function SpecialtyCard({ item }: SpecialtyCardProps) {
           className="mb-[18px] h-[60px] w-[52px]"
         />
       ) : (
-        <DropletIcon className="mb-[18px] h-[60px] w-[52px] text-brand-orange" aria-hidden="true" />
+        <Icon className="mb-[18px] h-[60px] w-[52px] text-brand-orange" aria-hidden="true" />
       )}
       <h3 className="mb-2 text-xl font-bold group-hover:text-brand-orange">{item.title}</h3>
       {item.description && (

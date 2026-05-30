@@ -165,3 +165,71 @@ export const GoogleIcon = (p: IconProps) => (
     />
   </svg>
 );
+
+// ---- Fertility / specialty icons (48x56 viewBox to match DropletIcon sizing) ----
+
+// IVF — embryo dividing inside a petri dish
+export const EmbryoIcon = (p: IconProps) => (
+  <svg viewBox="0 0 48 56" fill="none" {...p}>
+    <circle cx="24" cy="28" r="16" stroke="currentColor" strokeWidth={3} />
+    <circle cx="19" cy="26" r="5" fill="currentColor" />
+    <circle cx="28" cy="30" r="5" fill="currentColor" opacity={0.55} />
+    <path d="M6 40h36" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+  </svg>
+);
+
+// IUI — syringe (gentle insemination)
+export const SyringeIcon = (p: IconProps) => (
+  <svg viewBox="0 0 48 56" fill="none" {...p}>
+    <path
+      d="M30 12l6 6M33 9l6 6"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinecap="round"
+    />
+    <path
+      d="M31 17L17 31l-5 9 9-5 14-14-4-4z"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinejoin="round"
+    />
+    <path d="M22 26l4 4M13 39l-4 4" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+  </svg>
+);
+
+// ICSI — micro-needle injecting a single egg cell
+export const MicroInjectionIcon = (p: IconProps) => (
+  <svg viewBox="0 0 48 56" fill="none" {...p}>
+    <circle cx="20" cy="30" r="12" stroke="currentColor" strokeWidth={3} />
+    <circle cx="20" cy="30" r="4" fill="currentColor" />
+    <path d="M32 30h12" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <path d="M40 26l4 4-4 4" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+// Donor Program — heart held in caring hands
+export const HeartHandsIcon = (p: IconProps) => (
+  <svg viewBox="0 0 48 56" fill="none" {...p}>
+    <path
+      d="M24 14c2-3 7-3 9 0 2 2.5 1 6-9 13-10-7-11-10.5-9-13 2-3 7-3 9 0z"
+      fill="currentColor"
+    />
+    <path
+      d="M6 34c4 0 6 2 9 4M42 34c-4 0-6 2-9 4M6 34v8M42 34v8"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Fertility Preservation — snowflake (cryo freezing)
+export const SnowflakeIcon = (p: IconProps) => (
+  <svg viewBox="0 0 48 56" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" {...p}>
+    <path d="M24 10v36M9 19l30 18M39 19L9 37" />
+    <path d="M24 16l-4-4M24 16l4-4M24 40l-4 4M24 40l4 4" />
+    <path d="M13 22l-5.5-1M13 22l1-5.5M35 34l5.5 1M35 34l-1 5.5" />
+    <path d="M35 22l5.5-1M35 22l-1-5.5M13 34l-5.5 1M13 34l1 5.5" />
+  </svg>
+);
