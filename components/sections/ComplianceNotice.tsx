@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ComplianceNoticeContent } from "@/lib/types";
+import { CheckIcon } from "@/components/ui/icons";
 
 export interface ComplianceNoticeProps {
   content: ComplianceNoticeContent;
@@ -7,49 +8,43 @@ export interface ComplianceNoticeProps {
 
 export function ComplianceNotice({ content }: ComplianceNoticeProps) {
   return (
-    <section
-      aria-labelledby="compliance-heading"
-      className="bg-secondary text-white"
-    >
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
-        <div className="flex items-center justify-center gap-3">
-          <span className="h-px w-10 bg-primary" aria-hidden="true" />
-          <h2 id="compliance-heading" className="font-display text-xl font-bold text-primary-500 sm:text-2xl">
-            {content.heading}
-          </h2>
-          <span className="h-px w-10 bg-primary" aria-hidden="true" />
-        </div>
-        <div className="mt-8 grid gap-8 lg:grid-cols-[2fr,1fr] lg:items-center">
-          <ul className="flex flex-col gap-3">
-            {content.bullets.map((b) => (
-              <li key={b} className="flex items-start gap-3 text-sm sm:text-base">
-                <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                <span className="text-white/90">{b}</span>
-              </li>
-            ))}
-          </ul>
-          {content.image && (
-            <div className="relative mx-auto aspect-square w-48 sm:w-56 lg:w-full lg:max-w-xs">
-              <Image
-                src={content.image.src}
-                alt={content.image.alt}
-                fill
-                sizes="(min-width: 1024px) 320px, 240px"
-                className="object-contain"
-              />
-            </div>
-          )}
+    <section aria-labelledby="compliance-heading" className="pb-16 pt-6">
+      <div className="mx-auto max-w-site px-6">
+        <div className="overflow-hidden rounded-panel bg-gradient-to-br from-brand-navy to-brand-blue px-7 py-12 text-white md:px-[52px]">
+          <div className="mb-9 flex items-center justify-center gap-[18px]">
+            <span className="h-[3px] w-[62px] rounded-sm bg-brand-orange" aria-hidden="true" />
+            <h2 id="compliance-heading" className="text-[26px] font-bold text-brand-orange">
+              {content.heading}
+            </h2>
+            <span className="h-[3px] w-[62px] rounded-sm bg-brand-orange" aria-hidden="true" />
+          </div>
+          <div className="grid items-center gap-8 md:grid-cols-[1.5fr_1fr]">
+            <ul className="flex flex-col gap-[18px]">
+              {content.bullets.map((b) => (
+                <li key={b} className="flex items-center gap-3.5 text-base font-medium">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-orange">
+                    <CheckIcon className="h-3.5 w-3.5 fill-white" aria-hidden="true" />
+                  </span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+            {content.image && (
+              <div className="justify-self-center">
+                <div className="relative flex h-[230px] w-[200px] items-center justify-center overflow-hidden rounded-full border-2 border-white/85">
+                  <Image
+                    src={content.image.src}
+                    alt={content.image.alt}
+                    width={300}
+                    height={300}
+                    className="absolute -bottom-3 -right-6 max-w-none opacity-40 brightness-0 invert"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function CheckCircleIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <circle cx="12" cy="12" r="10" />
-      <path d="m8 12 3 3 5-6" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }

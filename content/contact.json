@@ -8,12 +8,14 @@
     "trust": {
       "badgeLabel": "Trusted by millions",
       "avatars": [
-        { "src": "/images/avatar-1.svg", "alt": "" },
-        { "src": "/images/avatar-2.svg", "alt": "" },
-        { "src": "/images/avatar-3.svg", "alt": "" },
-        { "src": "/images/avatar-4.svg", "alt": "" }
+        { "src": "/images/avatars.png", "alt": "" },
+        { "src": "/images/avatars.png", "alt": "" },
+        { "src": "/images/avatars.png", "alt": "" },
+        { "src": "/images/avatars.png", "alt": "" },
+        { "src": "/images/avatars.png", "alt": "" }
       ],
       "rating": "4.84",
+      "ratingMax": "5",
       "reviewsLabel": "1,000+",
       "trustLine": "Trusted by millions."
     },
@@ -89,15 +91,15 @@
     "heading": "Compliance Notice",
     "bullets": [
       "Your details are kept completely confidential",
-      "Our health advisor will guide you without obligation",
-      "Programs are for stable, non-emergency cases only",
-      "Not a replacement for emergency medical treatment",
-      "Always consult your treating physician",
-      "Results vary depending on adherence and health condition"
+      "Our fertility advisor will guide you without obligation",
+      "Treatment plans are personalised to your diagnosis",
+      "Not a substitute for in-person medical evaluation",
+      "Always consult your treating fertility specialist",
+      "Success rates vary by age, diagnosis and treatment plan"
     ],
     "image": {
-      "src": "/images/compliance-illustration.svg",
-      "alt": "Line illustration of a mother holding her newborn child"
+      "src": "/images/mother-baby.png",
+      "alt": "Illustration of a mother holding her newborn child"
     }
   }
 }
