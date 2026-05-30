@@ -168,13 +168,23 @@ export const GoogleIcon = (p: IconProps) => (
 
 // ---- Fertility / specialty icons (48x56 viewBox to match DropletIcon sizing) ----
 
-// IVF — ovum with a sperm swimming toward it (fertilisation)
+// IVF — the Alchemy brand mark: droplet + ovum + sperm (fertilisation)
 export const EmbryoIcon = (p: IconProps) => (
-  <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <circle cx="31" cy="20" r="13" stroke="currentColor" strokeWidth={3} />
-    <circle cx="31" cy="20" r="4.5" fill="currentColor" />
-    <circle cx="8" cy="44" r="4.5" fill="currentColor" />
-    <path d="M11 41c5-4 8-8 10-13" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+  <svg viewBox="0 0 56 56" fill="none" {...p}>
+    <path
+      d="M31 5c8.5 9.5 13.5 16.5 13.5 24a13.5 13.5 0 0 1-27 0c0-7.5 5-14.5 13.5-24z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={3.5}
+    />
+    <circle cx="31" cy="31" r="8.5" fill="currentColor" />
+    <circle cx="9" cy="47" r="3.2" fill="currentColor" />
+    <path
+      d="M11.5 45.5c2.5-2.5 5-4.5 7-8"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinecap="round"
+    />
   </svg>
 );
 
