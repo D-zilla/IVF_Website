@@ -168,57 +168,57 @@ export const GoogleIcon = (p: IconProps) => (
 
 // ---- Fertility / specialty icons (48x56 viewBox to match DropletIcon sizing) ----
 
-// IVF — embryo dividing inside a petri dish
+// IVF — ovum with a sperm swimming toward it (fertilisation)
 export const EmbryoIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <circle cx="24" cy="28" r="16" stroke="currentColor" strokeWidth={3} />
-    <circle cx="19" cy="26" r="5" fill="currentColor" />
-    <circle cx="28" cy="30" r="5" fill="currentColor" opacity={0.55} />
-    <path d="M6 40h36" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <circle cx="31" cy="20" r="13" stroke="currentColor" strokeWidth={3} />
+    <circle cx="31" cy="20" r="4.5" fill="currentColor" />
+    <circle cx="8" cy="44" r="4.5" fill="currentColor" />
+    <path d="M11 41c5-4 8-8 10-13" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
   </svg>
 );
 
-// IUI — syringe (gentle insemination)
+// IUI — syringe with a drop (gentle insemination)
 export const SyringeIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <path
-      d="M30 12l6 6M33 9l6 6"
+    <path d="M13 13l7 7" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <rect
+      x="17.5"
+      y="16.5"
+      width="19"
+      height="10"
+      rx="1.5"
+      transform="rotate(45 27 21.5)"
       stroke="currentColor"
       strokeWidth={3}
-      strokeLinecap="round"
     />
-    <path
-      d="M31 17L17 31l-5 9 9-5 14-14-4-4z"
-      stroke="currentColor"
-      strokeWidth={3}
-      strokeLinejoin="round"
-    />
-    <path d="M22 26l4 4M13 39l-4 4" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <path d="M23 19l6 6" stroke="currentColor" strokeWidth={3} />
+    <path d="M31 27l7 7" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <path d="M40 40c2 2.4 2 4.6 0 6.6-2 1.6-4.2-.2-2.4-3.4z" fill="currentColor" />
   </svg>
 );
 
-// ICSI — micro-needle injecting a single egg cell
+// ICSI — egg held by a pipette with an injecting needle (single-sperm injection)
 export const MicroInjectionIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <circle cx="20" cy="30" r="12" stroke="currentColor" strokeWidth={3} />
-    <circle cx="20" cy="30" r="4" fill="currentColor" />
-    <path d="M32 30h12" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
-    <path d="M40 26l4 4-4 4" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="24" cy="28" r="11" stroke="currentColor" strokeWidth={3} />
+    <circle cx="24" cy="28" r="3.5" fill="currentColor" />
+    <path d="M3 24v8M3 28h10" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
+    <path d="M45 28H35" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
   </svg>
 );
 
-// Donor Program — heart held in caring hands
+// Donor Program — heart resting in an open hand (giving)
 export const HeartHandsIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" {...p}>
     <path
-      d="M24 14c2-3 7-3 9 0 2 2.5 1 6-9 13-10-7-11-10.5-9-13 2-3 7-3 9 0z"
+      d="M24 10c2.2-2.8 6.4-2.8 8.4 0 2 2.4 1 5.6-8.4 11.6-9.4-6-10.4-9.2-8.4-11.6 2-2.8 6.2-2.8 8.4 0z"
       fill="currentColor"
     />
     <path
-      d="M6 34c4 0 6 2 9 4M42 34c-4 0-6 2-9 4M6 34v8M42 34v8"
+      d="M7 33c0-1.8 1.4-2.8 3.2-2.6 5 .6 9.4 2.6 14.8 2.6h8c2.2 0 2.8 2.8.4 3.6l-9.6 3.2c-3.2 1-6.6 1-9.8-.2l-4.4-1.6C8 39.6 7 38.4 7 36z"
       stroke="currentColor"
       strokeWidth={3}
-      strokeLinecap="round"
       strokeLinejoin="round"
     />
   </svg>
@@ -227,9 +227,9 @@ export const HeartHandsIcon = (p: IconProps) => (
 // Fertility Preservation — snowflake (cryo freezing)
 export const SnowflakeIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" {...p}>
-    <path d="M24 10v36M9 19l30 18M39 19L9 37" />
-    <path d="M24 16l-4-4M24 16l4-4M24 40l-4 4M24 40l4 4" />
-    <path d="M13 22l-5.5-1M13 22l1-5.5M35 34l5.5 1M35 34l-1 5.5" />
-    <path d="M35 22l5.5-1M35 22l-1-5.5M13 34l-5.5 1M13 34l1 5.5" />
+    <path d="M24 9v38M8 18l32 19M40 18L8 37" />
+    <path d="M24 16l-5-5M24 16l5-5M24 40l-5 5M24 40l5 5" />
+    <path d="M13 22l-6.5-1.5M13 22l1.5-6.5M35 33l6.5 1.5M35 33l-1.5 6.5" />
+    <path d="M35 22l6.5-1.5M35 22l-1.5-6.5M13 33l-6.5 1.5M13 33l1.5 6.5" />
   </svg>
 );
