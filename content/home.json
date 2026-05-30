@@ -26,32 +26,32 @@
     "items": [
       {
         "title": "IVF",
-        "description": "In-vitro fertilisation tailored to each couple's needs.",
-        "ctaLabel": "Learn more",
+        "description": "Advanced in-vitro fertilisation with high success rates for couples facing infertility.",
+        "ctaLabel": "Learn about IVF",
         "href": "/contact"
       },
       {
         "title": "IUI",
-        "description": "Intrauterine insemination for selected fertility cases.",
-        "ctaLabel": "Learn more",
+        "description": "Affordable intrauterine insemination, a gentle first-line fertility treatment.",
+        "ctaLabel": "Learn about IUI",
         "href": "/contact"
       },
       {
         "title": "ICSI",
-        "description": "Single-sperm injection for severe male-factor cases.",
-        "ctaLabel": "Learn more",
+        "description": "Precise single-sperm injection that treats severe male-factor infertility.",
+        "ctaLabel": "Learn about ICSI",
         "href": "/contact"
       },
       {
         "title": "Donor Program",
-        "description": "Screened egg, sperm and embryo donor pathways.",
-        "ctaLabel": "Learn more",
+        "description": "Fully screened egg, sperm and embryo donor options with complete confidentiality.",
+        "ctaLabel": "Explore donor options",
         "href": "/contact"
       },
       {
         "title": "Fertility Preservation",
-        "description": "Egg, sperm and embryo freezing for future use.",
-        "ctaLabel": "Learn more",
+        "description": "Egg, sperm and embryo freezing to protect your future family planning.",
+        "ctaLabel": "Learn about fertility preservation",
         "href": "/contact"
       }
     ]
