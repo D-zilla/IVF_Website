@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { HeaderContent } from "@/lib/types";
-import { Logo } from "./Logo";
 
 export interface HeaderProps {
   content: HeaderContent;
@@ -22,15 +22,17 @@ export function Header({ content }: HeaderProps) {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-divider bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="mx-auto flex max-w-container items-center justify-between gap-6 px-4 py-3 lg:px-6">
-        <Link
-          href="/"
-          aria-label={`${content.brand.name} home`}
-          className="flex items-center gap-2"
-        >
-          <Logo className="h-10 w-auto" />
-          <span className="sr-only">{content.brand.name}</span>
+    <header className="sticky top-0 z-50 border-b border-[#C2C2C2] bg-white">
+      <div className="mx-auto flex h-[68px] max-w-site items-center justify-between gap-6 px-6 sm:h-[86px]">
+        <Link href="/" aria-label={`${content.brand.name} home`}>
+          <Image
+            src="/images/logo.png"
+            alt={content.brand.logoAlt}
+            width={184}
+            height={50}
+            className="h-10 w-auto sm:h-[50px]"
+            priority
+          />
         </Link>
 
         <nav
@@ -41,7 +43,7 @@ export function Header({ content }: HeaderProps) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink hover:text-primary"
+              className="text-sm font-medium text-ink hover:text-brand-orange"
             >
               {link.label}
             </Link>
@@ -51,7 +53,7 @@ export function Header({ content }: HeaderProps) {
         <div className="flex items-center gap-2">
           <Link
             href={content.ctaHref}
-            className="hidden rounded-pill bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 lg:inline-flex"
+            className="inline-flex items-center justify-center rounded-card bg-brand-orange px-5 py-2.5 text-sm font-bold text-white shadow-[0_6px_16px_rgba(239,118,35,0.28)] transition hover:-translate-y-0.5 hover:bg-brand-orangeDark sm:px-[30px] sm:py-[13px] sm:text-base"
           >
             {content.ctaLabel}
           </Link>
@@ -61,7 +63,7 @@ export function Header({ content }: HeaderProps) {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-secondary hover:bg-peach-100 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-brand-navy hover:bg-brand-orangeBg lg:hidden"
           >
             {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
           </button>
@@ -73,28 +75,19 @@ export function Header({ content }: HeaderProps) {
         hidden={!open}
         className="border-t border-divider bg-white lg:hidden"
       >
-        <nav aria-label="Mobile" className="mx-auto max-w-container px-4 py-4">
+        <nav aria-label="Mobile" className="mx-auto max-w-site px-6 py-4">
           <ul className="flex flex-col gap-1">
             {content.nav.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-3 text-base font-medium text-ink hover:bg-peach-50 hover:text-primary"
+                  className="block rounded-md px-3 py-3 text-base font-medium text-ink hover:bg-brand-orangeBg hover:text-brand-orange"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
-              <Link
-                href={content.ctaHref}
-                onClick={() => setOpen(false)}
-                className="block rounded-pill bg-primary px-5 py-3 text-center text-base font-semibold text-white hover:bg-primary-600"
-              >
-                {content.ctaLabel}
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

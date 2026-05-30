@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { FooterContent } from "@/lib/types";
-import { Logo } from "./Logo";
+import { BuildingIcon, PhoneFooterIcon } from "@/components/ui/icons";
 
 export interface FooterProps {
   content: FooterContent;
@@ -8,56 +9,59 @@ export interface FooterProps {
 
 export function Footer({ content }: FooterProps) {
   return (
-    <footer className="bg-surface-navy text-white">
-      <div className="mx-auto grid max-w-container grid-cols-1 gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:px-6 lg:py-16">
-        <div>
-          <Link href="/" aria-label={`${content.brand.name} home`} className="inline-flex">
-            <Logo variant="inverse" className="h-12 w-auto" />
-            <span className="sr-only">{content.brand.name}</span>
-          </Link>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
-            {content.description}
-          </p>
+    <footer className="bg-brand-footer pb-8 pt-16 text-white">
+      <div className="mx-auto max-w-site px-6">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
+          {/* Brand */}
+          <div>
+            <Link href="/" aria-label={`${content.brand.name} home`} className="inline-flex">
+              <Image
+                src="/images/logo.png"
+                alt={content.brand.logoAlt}
+                width={184}
+                height={52}
+                className="mb-5 h-[52px] w-auto brightness-0 invert"
+              />
+            </Link>
+            <p className="max-w-[260px] text-[15px] leading-relaxed text-[#c4cad8]">
+              {content.description}
+            </p>
+          </div>
+
+          <FooterColumn column={content.quickLinks} />
+          <FooterColumn column={content.services} />
+
+          <div>
+            <h2 className="mb-[22px] text-[22px] font-bold">{content.contact.title}</h2>
+            <div className="flex flex-col gap-[22px]">
+              <div className="flex items-start gap-3.5">
+                <BuildingIcon className="mt-0.5 h-[22px] w-[22px] shrink-0 fill-white" aria-hidden="true" />
+                <div className="text-[15px] font-medium">
+                  <span className="sr-only">{content.contact.address.label}: </span>
+                  {content.contact.address.value}
+                </div>
+              </div>
+              {content.contact.phones.map((phone) => (
+                <div key={phone.value} className="flex items-start gap-3.5">
+                  <PhoneFooterIcon className="mt-0.5 h-[22px] w-[22px] shrink-0 fill-white" aria-hidden="true" />
+                  <div>
+                    <div className="text-sm text-[#c4cad8]">{phone.label}</div>
+                    {phone.href ? (
+                      <a href={phone.href} className="mt-0.5 block text-[17px] font-bold hover:text-brand-orange">
+                        {phone.value}
+                      </a>
+                    ) : (
+                      <div className="mt-0.5 text-[17px] font-bold">{phone.value}</div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <FooterColumn column={content.quickLinks} />
-        <FooterColumn column={content.services} />
-
-        <div>
-          <h2 className="text-lg font-semibold text-white">{content.contact.title}</h2>
-          <ul className="mt-4 space-y-4 text-sm text-white/80">
-            <li className="flex items-start gap-3">
-              <BuildingIcon className="mt-0.5 h-5 w-5 shrink-0 text-white/70" aria-hidden="true" />
-              <span>
-                <span className="sr-only">{content.contact.address.label}: </span>
-                {content.contact.address.value}
-              </span>
-            </li>
-            {content.contact.phones.map((phone) => (
-              <li key={phone.value} className="flex items-start gap-3">
-                <PhoneIcon className="mt-0.5 h-5 w-5 shrink-0 text-white/70" aria-hidden="true" />
-                <span>
-                  <span className="block text-xs uppercase tracking-wide text-white/60">
-                    {phone.label}
-                  </span>
-                  {phone.href ? (
-                    <a href={phone.href} className="font-semibold text-white hover:underline">
-                      {phone.value}
-                    </a>
-                  ) : (
-                    <span className="font-semibold text-white">{phone.value}</span>
-                  )}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-container px-4 py-5 text-center text-sm text-white/70 lg:px-6">
-          {content.copyright}
-        </div>
+        <hr className="my-11 border-t border-white/15" />
+        <div className="text-center text-sm text-[#c4cad8]">{content.copyright}</div>
       </div>
     </footer>
   );
@@ -66,36 +70,16 @@ export function Footer({ content }: FooterProps) {
 function FooterColumn({ column }: { column: FooterContent["quickLinks"] }) {
   return (
     <div>
-      <h2 className="text-lg font-semibold text-white">{column.title}</h2>
-      <ul className="mt-4 space-y-3 text-sm">
+      <h2 className="mb-[22px] text-[22px] font-bold">{column.title}</h2>
+      <ul className="flex flex-col gap-3.5 text-[15px] text-[#dfe3ee]">
         {column.links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="text-white/80 hover:text-white hover:underline">
+            <Link href={link.href} className="hover:text-brand-orange">
               {link.label}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  );
-}
-
-function BuildingIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M4 21h12M4 21H2M16 21h4V11h-4" strokeLinejoin="round" />
-      <path d="M8 7h2M8 11h2M8 15h2M12 7h0M12 11h0M12 15h0" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <path
-        d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }
