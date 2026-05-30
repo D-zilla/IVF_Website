@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -9,6 +10,13 @@ import { medicalClinicSchema } from "@/lib/schema";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo";
 import type { SiteContent } from "@/lib/types";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const content = site as SiteContent;
 const clinicSchema = medicalClinicSchema({ site: content });
@@ -48,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-surface text-ink antialiased">
+    <html lang="en" className={inter.variable}>
+      <body className="min-h-screen bg-surface font-sans text-ink antialiased">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white"

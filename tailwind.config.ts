@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 
-// Placeholder design tokens. Exact values to be replaced from Figma in Phase 2.
+// Design tokens — Claude Design re-skin.
+// `brand.*` is the source palette from the new design. The legacy token
+// aliases (primary/secondary/accent/peach/ink/surface) are mapped onto the
+// new values so existing components keep rendering while sections migrate.
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -10,68 +13,76 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // primary.DEFAULT is the CTA tone (deep, AA-contrast-safe on white).
-        // primary.500 is the lighter brand orange for accent surfaces (TopBar, peach tints).
+        brand: {
+          orange: "#EF7623",
+          orangeDark: "#E06A1C",
+          orangeLight: "#FDCFAF",
+          orangeBg: "#FFF5F1",
+          navy: "#17254C",
+          blue: "#042D87",
+          footer: "#1A2440",
+          green: "#42A21F",
+        },
+        // ---- Legacy aliases mapped onto the new palette ----
         primary: {
-          DEFAULT: "#B85416",
-          50: "#FFF4EB",
-          100: "#FFE4CC",
-          200: "#FCC79A",
-          300: "#FAAA68",
-          400: "#F89B53",
-          500: "#F58A3F",
-          600: "#D9531F",
-          700: "#B45913",
-          800: "#7E3E0D",
-          900: "#4A2407",
+          DEFAULT: "#EF7623",
+          50: "#FFF5F1",
+          100: "#FDE3D1",
+          200: "#FDCFAF",
+          300: "#F9B384",
+          400: "#F39559",
+          500: "#EF7623",
+          600: "#E06A1C",
+          700: "#C25A16",
+          800: "#9A4711",
+          900: "#6B310B",
         },
         secondary: {
-          DEFAULT: "#102A56",
-          50: "#E6EAF1",
-          100: "#C2CCDD",
-          200: "#8A9CBC",
-          300: "#566F9B",
-          400: "#2A4677",
-          500: "#102A56",
-          600: "#0D2247",
-          700: "#0A1A37",
-          800: "#071326",
-          900: "#040B16",
+          DEFAULT: "#17254C",
+          50: "#E7EAF1",
+          100: "#C3CADC",
+          200: "#8B97BA",
+          300: "#566691",
+          400: "#2C3D6E",
+          500: "#17254C",
+          600: "#131F40",
+          700: "#0F1833",
+          800: "#0B1226",
+          900: "#070C19",
         },
-        // accent.DEFAULT is the WhatsApp CTA tone (deepened for AA on white).
-        // accent.500 is the WhatsApp brand green for icon fills / non-text surfaces.
         accent: {
-          DEFAULT: "#15803D",
-          50: "#E8FAF0",
-          100: "#C5F2D7",
-          500: "#25D366",
-          600: "#1FB958",
-          700: "#188F44",
+          DEFAULT: "#42A21F",
+          50: "#EFF9EA",
+          100: "#D6EFC9",
+          500: "#42A21F",
+          600: "#3A9019",
+          700: "#2F7714",
         },
         peach: {
-          50: "#FFF8F1",
-          100: "#FFF1E6",
-          200: "#FFE0C7",
-          300: "#FFCFA8",
+          50: "#FFF9F6",
+          100: "#FFF5F1",
+          200: "#FDE3D1",
+          300: "#FDCFAF",
         },
         ink: {
-          DEFAULT: "#111827",
-          muted: "#4B5563",
-          subtle: "#6B7280",
+          DEFAULT: "#000000",
+          muted: "#454545",
+          subtle: "#808080",
           inverse: "#FFFFFF",
         },
         surface: {
           DEFAULT: "#FFFFFF",
           alt: "#FAFAFA",
-          peach: "#FFF1E6",
-          navy: "#0B1F3A",
+          peach: "#FFF5F1",
+          navy: "#17254C",
         },
+        muted: "#454545",
+        subtle: "#808080",
         divider: "#E5E7EB",
       },
       fontFamily: {
-        // Placeholder font stacks. Real families from Figma in Phase 2.
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       spacing: {
         section: "4rem",
@@ -86,13 +97,17 @@ const config: Config = {
         xl: "1.25rem",
         "2xl": "1.5rem",
         "3xl": "2rem",
+        card: "11px",
+        panel: "14px",
         pill: "9999px",
       },
       maxWidth: {
         container: "1280px",
+        site: "1180px",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(16,24,40,0.04), 0 4px 12px rgba(16,24,40,0.06)",
+        card: "0 4px 18px rgba(0,0,0,0.08)",
+        panel: "0 8px 30px rgba(0,0,0,0.07)",
       },
     },
   },
