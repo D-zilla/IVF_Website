@@ -178,23 +178,20 @@ export const EmbryoIcon = (p: IconProps) => (
   </svg>
 );
 
-// IUI — syringe with a drop (gentle insemination)
+// IUI — filled syringe dipping into a sample (gentle insemination)
 export const SyringeIcon = (p: IconProps) => (
-  <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <path d="M13 13l7 7" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
-    <rect
-      x="17.5"
-      y="16.5"
-      width="19"
-      height="10"
-      rx="1.5"
-      transform="rotate(45 27 21.5)"
-      stroke="currentColor"
-      strokeWidth={3}
-    />
-    <path d="M23 19l6 6" stroke="currentColor" strokeWidth={3} />
-    <path d="M31 27l7 7" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
-    <path d="M40 40c2 2.4 2 4.6 0 6.6-2 1.6-4.2-.2-2.4-3.4z" fill="currentColor" />
+  <svg viewBox="0 0 56 56" fill="none" {...p}>
+    {/* sample circle: light tint of the brand orange */}
+    <circle cx="40" cy="40" r="13" fill="#FDCFAF" />
+    <g fill="currentColor" transform="rotate(45 28 28)">
+      <rect x="3" y="24.5" width="3" height="9" rx="1.5" />
+      <rect x="6" y="27.5" width="8" height="3" rx="1.5" />
+      <rect x="13" y="23" width="3.5" height="12" rx="1.5" />
+      <rect x="16" y="24.5" width="20" height="9" rx="2.5" />
+      <circle cx="25" cy="29" r="2.6" fill="#FFFFFF" />
+      <path d="M36 25.5h3l-1 8h-2z" />
+      <rect x="39" y="28" width="10" height="2" rx="1" />
+    </g>
   </svg>
 );
 
