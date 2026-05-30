@@ -10,7 +10,7 @@ export interface HeroImageProps {
 export function HeroImage({ content }: HeroImageProps) {
   const secondaryExternal = content.secondaryCta?.href.startsWith("http");
   return (
-    <section aria-labelledby="hero-title" className="pt-9">
+    <section id="about" aria-labelledby="hero-title" className="pt-9">
       <div className="mx-auto w-full max-w-site px-6">
         <div className="grid items-center gap-6 overflow-hidden rounded-panel bg-brand-orangeBg px-7 py-10 md:grid-cols-[1.02fr_0.98fr] md:py-0 md:pl-[52px] md:pr-0">
           <div className="max-w-[540px] py-2 md:py-[52px]">

@@ -7,7 +7,7 @@ export interface SpecialtiesGridProps {
 
 export function SpecialtiesGrid({ content }: SpecialtiesGridProps) {
   return (
-    <section aria-labelledby="specialties-heading" className="bg-white">
+    <section id="specialties" aria-labelledby="specialties-heading" className="bg-white">
       <div className="mx-auto max-w-site px-6 py-16">
         <h2
           id="specialties-heading"

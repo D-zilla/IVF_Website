@@ -15,10 +15,6 @@
     },
     "nav": [
       { "label": "Home", "href": "/" },
-      { "label": "About", "href": "/about" },
-      { "label": "Treatments", "href": "/treatments" },
-      { "label": "Doctors", "href": "/doctors" },
-      { "label": "Blog", "href": "/blog" },
       { "label": "Contact", "href": "/contact" }
     ],
     "ctaLabel": "Contact Us",
@@ -35,17 +31,17 @@
       "title": "Quick Links",
       "links": [
         { "label": "Home", "href": "/" },
-        { "label": "About", "href": "/about" },
-        { "label": "Services", "href": "/treatments" },
+        { "label": "About", "href": "/#about" },
+        { "label": "Services", "href": "/#specialties" },
         { "label": "Contact", "href": "/contact" }
       ]
     },
     "services": {
       "title": "Services",
       "links": [
-        { "label": "Counseling & Fertility Consultation", "href": "/treatments/counseling" },
-        { "label": "Laparoscopy & Hysteroscopy", "href": "/treatments/laparoscopy-hysteroscopy" },
-        { "label": "Gestational Carrier", "href": "/treatments/gestational-carrier" }
+        { "label": "Counseling & Fertility Consultation", "href": "/contact" },
+        { "label": "Laparoscopy & Hysteroscopy", "href": "/contact" },
+        { "label": "Gestational Carrier", "href": "/contact" }
       ]
     },
     "contact": {

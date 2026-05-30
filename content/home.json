@@ -28,31 +28,31 @@
         "title": "IVF",
         "description": "In-vitro fertilisation tailored to each couple's needs.",
         "ctaLabel": "Learn more",
-        "href": "/treatments/ivf"
+        "href": "/contact"
       },
       {
         "title": "IUI",
         "description": "Intrauterine insemination for selected fertility cases.",
         "ctaLabel": "Learn more",
-        "href": "/treatments/iui"
+        "href": "/contact"
       },
       {
         "title": "ICSI",
         "description": "Single-sperm injection for severe male-factor cases.",
         "ctaLabel": "Learn more",
-        "href": "/treatments/icsi"
+        "href": "/contact"
       },
       {
         "title": "Donor Program",
         "description": "Screened egg, sperm and embryo donor pathways.",
         "ctaLabel": "Learn more",
-        "href": "/treatments/donor-program"
+        "href": "/contact"
       },
       {
         "title": "Fertility Preservation",
         "description": "Egg, sperm and embryo freezing for future use.",
         "ctaLabel": "Learn more",
-        "href": "/treatments/fertility-preservation"
+        "href": "/contact"
       }
     ]
   },
@@ -82,35 +82,30 @@
       {
         "name": "Dr. Priya Sharma",
         "title": "IVF Specialist",
-        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Priya Sharma" },
-        "href": "/doctors/priya-sharma"
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Priya Sharma" }
       },
       {
         "name": "Dr. Anil Adhikari",
         "title": "Reproductive Endocrinologist",
-        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Anil Adhikari" },
-        "href": "/doctors/anil-adhikari"
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Anil Adhikari" }
       },
       {
         "name": "Dr. Meera Karki",
         "title": "Embryologist",
-        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Meera Karki" },
-        "href": "/doctors/meera-karki"
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Meera Karki" }
       },
       {
         "name": "Dr. Suresh Thapa",
         "title": "Andrologist",
-        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Suresh Thapa" },
-        "href": "/doctors/suresh-thapa"
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Suresh Thapa" }
       },
       {
         "name": "Dr. Rita Gurung",
         "title": "Fertility Counsellor",
-        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Rita Gurung" },
-        "href": "/doctors/rita-gurung"
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Rita Gurung" }
       }
     ],
-    "viewAll": { "label": "View All", "href": "/doctors" }
+    "viewAll": { "label": "View All", "href": "/contact" }
   },
   "testimonials": {
     "heading": "What Our Happy Couples Are Saying",
@@ -146,7 +141,7 @@
         "caption": "Why we chose Alchemy IVF"
       }
     ],
-    "viewAll": { "label": "View All Patient Stories", "href": "/blog/patient-stories" }
+    "viewAll": { "label": "View All Patient Stories", "href": "/contact" }
   },
   "whyChoose": {
     "heading": "Why Choose Alchemy IVF?",
