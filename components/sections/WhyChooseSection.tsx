@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { WhyChooseSectionContent } from "@/lib/types";
+import { DropletIcon } from "@/components/ui/icons";
 
 export interface WhyChooseSectionProps {
   content: WhyChooseSectionContent;
@@ -7,46 +8,39 @@ export interface WhyChooseSectionProps {
 
 export function WhyChooseSection({ content }: WhyChooseSectionProps) {
   return (
-    <section
-      aria-labelledby="why-choose-heading"
-      className="bg-secondary text-white"
-    >
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
-        <h2
-          id="why-choose-heading"
-          className="text-center font-display text-2xl font-bold sm:text-3xl"
-        >
-          {content.heading}
-        </h2>
-        <ul className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
-          {content.features.map((f) => (
-            <li
-              key={f.title}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/5">
+    <section aria-labelledby="why-choose-heading" className="bg-white py-16">
+      <div className="mx-auto max-w-site px-6">
+        <div className="rounded-panel bg-gradient-to-br from-[#13245b] to-brand-blue px-7 py-12 text-white md:px-10 md:py-[50px]">
+          <h2
+            id="why-choose-heading"
+            className="mb-10 text-center text-[32px] font-bold"
+          >
+            {content.heading}
+          </h2>
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {content.features.map((f) => (
+              <li key={f.title} className="text-center">
                 {f.iconSrc ? (
-                  <Image src={f.iconSrc} alt="" width={32} height={32} sizes="32px" />
+                  <Image
+                    src={f.iconSrc}
+                    alt=""
+                    width={46}
+                    height={54}
+                    sizes="46px"
+                    className="mx-auto mb-4 h-[54px] w-[46px]"
+                  />
                 ) : (
-                  <DropIcon className="h-8 w-8 text-primary" aria-hidden="true" />
+                  <DropletIcon className="mx-auto mb-4 h-[54px] w-[46px] text-white" aria-hidden="true" />
                 )}
-              </div>
-              <h3 className="mt-3 text-sm font-semibold sm:text-base">{f.title}</h3>
-              {f.description && (
-                <p className="mt-1 text-xs text-white/70 sm:text-sm">{f.description}</p>
-              )}
-            </li>
-          ))}
-        </ul>
+                <h3 className="mb-2 text-[17px] font-bold">{f.title}</h3>
+                {f.description && (
+                  <p className="text-sm leading-snug text-[#cfd7ee]">{f.description}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
-  );
-}
-
-function DropIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12 2.5c4.5 5.2 7 9 7 12.5a7 7 0 1 1-14 0c0-3.5 2.5-7.3 7-12.5Z" />
-    </svg>
   );
 }

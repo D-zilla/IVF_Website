@@ -8,14 +8,14 @@ export interface SpecialtiesGridProps {
 export function SpecialtiesGrid({ content }: SpecialtiesGridProps) {
   return (
     <section aria-labelledby="specialties-heading" className="bg-white">
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
+      <div className="mx-auto max-w-site px-6 py-16">
         <h2
           id="specialties-heading"
-          className="text-center font-display text-2xl font-bold text-secondary sm:text-3xl"
+          className="mb-11 text-center text-3xl font-bold sm:text-4xl"
         >
           {content.heading}
         </h2>
-        <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:mt-12 lg:grid-cols-5">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {content.items.map((item) => (
             <li key={item.title}>
               <SpecialtyCard item={item} />

@@ -1,5 +1,5 @@
+import Link from "next/link";
 import type { DoctorsSectionContent } from "@/lib/types";
-import { ButtonLink } from "@/components/ui/Button";
 import { DoctorCard } from "./DoctorCard";
 
 export interface DoctorsGridProps {
@@ -8,15 +8,15 @@ export interface DoctorsGridProps {
 
 export function DoctorsGrid({ content }: DoctorsGridProps) {
   return (
-    <section aria-labelledby="doctors-heading" className="bg-white">
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
+    <section aria-labelledby="doctors-heading" className="bg-white py-16">
+      <div className="mx-auto max-w-site px-6">
         <h2
           id="doctors-heading"
-          className="text-center font-display text-2xl font-bold text-secondary sm:text-3xl"
+          className="mb-11 text-center text-3xl font-bold sm:text-4xl"
         >
           {content.heading}
         </h2>
-        <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:mt-12 lg:grid-cols-5">
+        <ul className="mb-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {content.doctors.map((doctor) => (
             <li key={doctor.name}>
               <DoctorCard doctor={doctor} />
@@ -24,10 +24,13 @@ export function DoctorsGrid({ content }: DoctorsGridProps) {
           ))}
         </ul>
         {content.viewAll && (
-          <div className="mt-8 flex justify-center">
-            <ButtonLink href={content.viewAll.href} variant="primary" size="md">
+          <div className="flex justify-center">
+            <Link
+              href={content.viewAll.href}
+              className="inline-flex items-center justify-center rounded-card bg-brand-orange px-9 py-[13px] text-base font-bold text-white shadow-[0_6px_16px_rgba(239,118,35,0.28)] transition hover:-translate-y-0.5 hover:bg-brand-orangeDark"
+            >
               {content.viewAll.label}
-            </ButtonLink>
+            </Link>
           </div>
         )}
       </div>

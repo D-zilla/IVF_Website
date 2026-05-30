@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { SpecialtyCardContent } from "@/lib/types";
-import { Card } from "@/components/ui/Card";
+import { DropletIcon } from "@/components/ui/icons";
 
 export interface SpecialtyCardProps {
   item: SpecialtyCardContent;
@@ -9,41 +9,26 @@ export interface SpecialtyCardProps {
 
 export function SpecialtyCard({ item }: SpecialtyCardProps) {
   return (
-    <Card tone="outline" padding="md" radius="xl" className="flex h-full flex-col items-center text-center">
-      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-peach-100">
-        {item.iconSrc ? (
-          <Image
-            src={item.iconSrc}
-            alt=""
-            width={32}
-            height={32}
-            sizes="32px"
-          />
-        ) : (
-          <DropIcon className="h-8 w-8 text-primary" aria-hidden="true" />
-        )}
-      </div>
-      <h3 className="mt-4 text-base font-semibold text-secondary sm:text-lg">
-        {item.title}
-      </h3>
-      {item.description && (
-        <p className="mt-2 text-sm text-ink-muted">{item.description}</p>
+    <div className="h-full rounded-card bg-white px-[18px] py-[30px] text-center shadow-card transition hover:-translate-y-1.5 hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)]">
+      {item.iconSrc ? (
+        <Image
+          src={item.iconSrc}
+          alt=""
+          width={52}
+          height={60}
+          sizes="52px"
+          className="mx-auto mb-[18px] h-[60px] w-[52px]"
+        />
+      ) : (
+        <DropletIcon className="mx-auto mb-[18px] h-[60px] w-[52px] text-brand-orange" aria-hidden="true" />
       )}
+      <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
       <Link
         href={item.href}
-        className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary-700 hover:underline"
+        className="text-[13px] font-semibold text-subtle hover:text-brand-orange"
       >
-        {item.ctaLabel} {item.title}
-        <span aria-hidden="true">→</span>
+        {item.ctaLabel}
       </Link>
-    </Card>
-  );
-}
-
-function DropIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12 2.5c4.5 5.2 7 9 7 12.5a7 7 0 1 1-14 0c0-3.5 2.5-7.3 7-12.5Z" />
-    </svg>
+    </div>
   );
 }

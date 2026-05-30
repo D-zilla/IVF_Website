@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { ReviewContent } from "@/lib/types";
-import { Card } from "@/components/ui/Card";
+import { StarIcon, GoogleIcon } from "@/components/ui/icons";
 
 export interface ReviewCardProps {
   review: ReviewContent;
@@ -8,63 +8,50 @@ export interface ReviewCardProps {
 
 export function ReviewCard({ review }: ReviewCardProps) {
   const rating = Math.max(0, Math.min(5, Math.round(review.rating)));
+  const isGoogle = review.sourceLabel?.toLowerCase() === "google";
   return (
-    <Card tone="default" padding="md" radius="xl" className="flex h-full flex-col gap-3">
-      <header className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <div
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary"
-            aria-hidden="true"
-          >
-            {review.avatarLetter ?? review.author.charAt(0)}
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-secondary">{review.author}</p>
-            {review.timeAgo && (
-              <p className="text-xs text-ink-subtle">{review.timeAgo}</p>
-            )}
-          </div>
+    <div className="h-full rounded-xl border border-[#eee] bg-white p-[22px] shadow-[0_6px_20px_rgba(0,0,0,0.06)]">
+      <div className="mb-3.5 flex items-center gap-3">
+        <div
+          className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-brand-orange text-lg font-bold text-white"
+          aria-hidden="true"
+        >
+          {review.avatarLetter ?? review.author.charAt(0)}
+        </div>
+        <div>
+          <div className="text-base font-bold">{review.author}</div>
+          {review.timeAgo && (
+            <div className="text-[13px] text-subtle">{review.timeAgo}</div>
+          )}
         </div>
         {review.sourceIconSrc ? (
           <Image
             src={review.sourceIconSrc}
             alt={review.sourceLabel ?? ""}
-            width={20}
-            height={20}
-            sizes="20px"
+            width={22}
+            height={22}
+            sizes="22px"
+            className="ml-auto"
           />
+        ) : isGoogle ? (
+          <GoogleIcon className="ml-auto h-[22px] w-[22px]" aria-label="Google review" />
         ) : review.sourceLabel ? (
-          <span className="text-xs font-medium text-ink-subtle">{review.sourceLabel}</span>
+          <span className="ml-auto text-xs font-medium text-subtle">{review.sourceLabel}</span>
         ) : null}
-      </header>
+      </div>
       <div
         role="img"
-        className="flex items-center gap-0.5 text-amber-500"
+        className="mb-3 flex gap-[3px]"
         aria-label={`Rating: ${rating} out of 5`}
       >
         {Array.from({ length: 5 }).map((_, i) => (
-          <StarIcon key={i} className="h-4 w-4" filled={i < rating} />
+          <StarIcon
+            key={i}
+            className={`h-5 w-5 ${i < rating ? "fill-[#FFB400]" : "fill-[#E0E0E0]"}`}
+          />
         ))}
       </div>
-      <p className="text-sm text-ink-muted">{review.body}</p>
-    </Card>
-  );
-}
-
-function StarIcon({ filled, className }: { filled: boolean; className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill={filled ? "currentColor" : "none"}
-      stroke="currentColor"
-      strokeWidth="1.5"
-      className={className}
-      aria-hidden="true"
-    >
-      <path
-        strokeLinejoin="round"
-        d="m12 3 2.6 5.6 6.1.6-4.6 4.2 1.4 6-5.5-3.2-5.5 3.2 1.4-6L3.3 9.2l6.1-.6L12 3Z"
-      />
-    </svg>
+      <p className="text-[15px] leading-[1.55] text-[#222]">{review.body}</p>
+    </div>
   );
 }

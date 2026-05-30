@@ -11,23 +11,20 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
   const wrapperProps = doctor.href ? { href: doctor.href } : {};
 
   return (
-    <Wrapper
-      {...wrapperProps}
-      className="group flex flex-col items-center text-center"
-    >
-      <div className="relative h-28 w-28 overflow-hidden rounded-full ring-2 ring-peach-100 sm:h-32 sm:w-32">
+    <Wrapper {...wrapperProps} className="group block text-center">
+      <div className="relative mx-auto mb-4 h-[175px] w-[175px] overflow-hidden rounded-full shadow-[0_6px_18px_rgba(0,0,0,0.12)]">
         <Image
           src={doctor.image.src}
           alt={doctor.image.alt}
           fill
-          sizes="(min-width: 640px) 128px, 112px"
+          sizes="175px"
           className="object-cover"
         />
       </div>
-      <h3 className="mt-3 text-sm font-semibold text-secondary group-hover:text-primary sm:text-base">
+      <div className="text-base font-bold group-hover:text-brand-orange">
         {doctor.name}
-      </h3>
-      <p className="text-xs text-ink-muted sm:text-sm">{doctor.title}</p>
+      </div>
+      <div className="mt-0.5 text-[15px] text-muted">{doctor.title}</div>
     </Wrapper>
   );
 }

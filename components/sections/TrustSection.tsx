@@ -1,85 +1,74 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { TrustSectionContent } from "@/lib/types";
-import { ButtonLink } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
+import { CheckIcon, PersonalCareIcon } from "@/components/ui/icons";
 
 export interface TrustSectionProps {
   content: TrustSectionContent;
 }
 
 export function TrustSection({ content }: TrustSectionProps) {
+  const secondaryExternal = content.secondaryCta?.href.startsWith("http");
   return (
-    <section
-      aria-labelledby="trust-heading"
-      className="bg-secondary text-white"
-    >
-      <div className="mx-auto grid max-w-container gap-10 px-4 py-12 sm:py-16 lg:grid-cols-2 lg:px-6 lg:py-20">
-        <div className="flex flex-col gap-6">
-          <h2 id="trust-heading" className="font-display text-2xl font-bold sm:text-3xl">
-            {content.heading}
-          </h2>
-          <p className="text-sm text-white/80 sm:text-base">{content.description}</p>
-          <ul className="flex flex-col gap-3">
-            {content.points.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-sm sm:text-base">
-                <CheckBadgeIcon className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-            <ButtonLink href={content.primaryCta.href} size="lg">
-              {content.primaryCta.label}
-            </ButtonLink>
-            {content.secondaryCta && (
-              <ButtonLink
-                href={content.secondaryCta.href}
-                variant="whatsapp"
-                size="lg"
-                external
-              >
-                {content.secondaryCta.label}
-              </ButtonLink>
-            )}
+    <section aria-labelledby="trust-heading" className="bg-white py-16">
+      <div className="mx-auto max-w-site px-6">
+        <div className="rounded-panel bg-gradient-to-br from-[#13245b] to-brand-blue px-7 py-12 text-white md:px-[52px] md:py-[54px]">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div>
+              <h2 id="trust-heading" className="mb-[18px] text-[32px] font-bold">
+                {content.heading}
+              </h2>
+              <p className="mb-6 max-w-[430px] text-[15px] leading-[1.7] text-[#d7ddf0]">
+                {content.description}
+              </p>
+              <ul className="mb-7 flex flex-col gap-4">
+                {content.points.map((point) => (
+                  <li key={point} className="flex items-center gap-3.5 text-base font-medium">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-orange">
+                      <CheckIcon className="h-3.5 w-3.5 fill-white" aria-hidden="true" />
+                    </span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-3.5">
+                <Link
+                  href={content.primaryCta.href}
+                  className="inline-flex items-center rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-orange transition hover:-translate-y-0.5"
+                >
+                  {content.primaryCta.label}
+                </Link>
+                {content.secondaryCta && (
+                  <a
+                    href={content.secondaryCta.href}
+                    {...(secondaryExternal
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="inline-flex items-center rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-green transition hover:-translate-y-0.5"
+                  >
+                    {content.secondaryCta.label}
+                  </a>
+                )}
+              </div>
+            </div>
+            <ul className="grid grid-cols-2 gap-[18px]">
+              {content.highlights.map((h) => (
+                <li
+                  key={h.title}
+                  className="flex h-[120px] flex-col items-center justify-center gap-3 rounded-card bg-brand-orange transition hover:-translate-y-1"
+                >
+                  {h.iconSrc ? (
+                    <Image src={h.iconSrc} alt="" width={42} height={42} sizes="42px" />
+                  ) : (
+                    <PersonalCareIcon className="h-[42px] w-[42px] fill-white" aria-hidden="true" />
+                  )}
+                  <span className="text-base font-bold">{h.title}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
-          {content.highlights.map((h) => (
-            <li key={h.title}>
-              <Card
-                tone="primary"
-                padding="md"
-                radius="xl"
-                className="flex h-full flex-col items-center justify-center text-center"
-              >
-                {h.iconSrc ? (
-                  <Image src={h.iconSrc} alt="" width={32} height={32} sizes="32px" />
-                ) : (
-                  <PlusBadgeIcon className="h-8 w-8 text-white" aria-hidden="true" />
-                )}
-                <p className="mt-2 text-sm font-semibold sm:text-base">{h.title}</p>
-              </Card>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
-  );
-}
-
-function CheckBadgeIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3Zm-1 13L7 11l1.4-1.4L11 12.2l4.6-4.6L17 9l-6 6Z" />
-    </svg>
-  );
-}
-
-function PlusBadgeIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <rect x="4" y="3" width="16" height="18" rx="2" />
-      <path d="M12 9v6M9 12h6" strokeLinecap="round" />
-    </svg>
   );
 }

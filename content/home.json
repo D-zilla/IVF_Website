@@ -15,7 +15,7 @@
     "primaryCta": { "label": "Book Appointment", "href": "/contact" },
     "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" },
     "image": {
-      "src": "/images/hero-family.svg",
+      "src": "/images/hero-hands.png",
       "alt": "A couple holds their newborn baby in a moment of quiet joy",
       "width": 800,
       "height": 600
@@ -82,31 +82,31 @@
       {
         "name": "Dr. Priya Sharma",
         "title": "IVF Specialist",
-        "image": { "src": "/images/doctor-1.svg", "alt": "Portrait of Dr. Priya Sharma" },
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Priya Sharma" },
         "href": "/doctors/priya-sharma"
       },
       {
         "name": "Dr. Anil Adhikari",
         "title": "Reproductive Endocrinologist",
-        "image": { "src": "/images/doctor-2.svg", "alt": "Portrait of Dr. Anil Adhikari" },
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Anil Adhikari" },
         "href": "/doctors/anil-adhikari"
       },
       {
         "name": "Dr. Meera Karki",
         "title": "Embryologist",
-        "image": { "src": "/images/doctor-3.svg", "alt": "Portrait of Dr. Meera Karki" },
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Meera Karki" },
         "href": "/doctors/meera-karki"
       },
       {
         "name": "Dr. Suresh Thapa",
         "title": "Andrologist",
-        "image": { "src": "/images/doctor-4.svg", "alt": "Portrait of Dr. Suresh Thapa" },
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Suresh Thapa" },
         "href": "/doctors/suresh-thapa"
       },
       {
         "name": "Dr. Rita Gurung",
         "title": "Fertility Counsellor",
-        "image": { "src": "/images/doctor-5.svg", "alt": "Portrait of Dr. Rita Gurung" },
+        "image": { "src": "/images/doctor.png", "alt": "Portrait of Dr. Rita Gurung" },
         "href": "/doctors/rita-gurung"
       }
     ],
@@ -116,32 +116,32 @@
     "heading": "What Our Happy Couples Are Saying",
     "videos": [
       {
-        "poster": { "src": "/images/story-1.svg", "alt": "Couple sharing their IVF success story" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Couple sharing their IVF success story" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder1",
         "caption": "Aarti and Rohan's IVF journey"
       },
       {
-        "poster": { "src": "/images/story-2.svg", "alt": "Patient speaking to camera during interview" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Patient speaking to camera during interview" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder2",
         "caption": "Sita's IUI story"
       },
       {
-        "poster": { "src": "/images/story-3.svg", "alt": "Doctor in a clinic with a patient" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Doctor in a clinic with a patient" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder3",
         "caption": "Inside our embryology lab"
       },
       {
-        "poster": { "src": "/images/story-4.svg", "alt": "Smiling parents with their baby" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Smiling parents with their baby" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder4",
         "caption": "Bishnu and Prerna's first child"
       },
       {
-        "poster": { "src": "/images/story-5.svg", "alt": "Counselling session at the clinic" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Counselling session at the clinic" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder5",
         "caption": "Counselling helped us through"
       },
       {
-        "poster": { "src": "/images/story-6.svg", "alt": "Patient walking through the clinic" },
+        "poster": { "src": "/images/story-thumb.png", "alt": "Patient walking through the clinic" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder6",
         "caption": "Why we chose Alchemy IVF"
       }
@@ -176,7 +176,7 @@
         "author": "Awwan Shakh",
         "timeAgo": "22 hours ago",
         "rating": 5,
-        "body": "Yes I was taking hair treatment from Dr Batra and got visible results, and the staff and management was amazing.",
+        "body": "From our first consultation to the embryo transfer, the Alchemy IVF team supported us with warmth and clarity. The staff and management were amazing.",
         "sourceLabel": "Google"
       },
       {

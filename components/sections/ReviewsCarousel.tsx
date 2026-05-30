@@ -1,104 +1,55 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import type { ReviewsSectionContent } from "@/lib/types";
 import { ReviewCard } from "./ReviewCard";
-import { cn } from "@/lib/utils";
+import { ChevronLeftIcon, ChevronRightIcon } from "@/components/ui/icons";
 
 export interface ReviewsCarouselProps {
   content: ReviewsSectionContent;
 }
 
 export function ReviewsCarousel({ content }: ReviewsCarouselProps) {
-  const trackRef = useRef<HTMLUListElement | null>(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
-
-  const updateBounds = useCallback(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    setCanPrev(el.scrollLeft > 4);
-    setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
-  }, []);
-
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    updateBounds();
-    el.addEventListener("scroll", updateBounds, { passive: true });
-    window.addEventListener("resize", updateBounds);
-    return () => {
-      el.removeEventListener("scroll", updateBounds);
-      window.removeEventListener("resize", updateBounds);
-    };
-  }, [updateBounds]);
-
-  function scrollBy(dir: 1 | -1) {
-    const el = trackRef.current;
-    if (!el) return;
-    const child = el.querySelector("li");
-    const step = child ? (child as HTMLElement).offsetWidth + 16 : el.clientWidth * 0.9;
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
-  }
+  const reviews = content.reviews;
+  const [start, setStart] = useState(0);
+  const count = reviews.length;
+  const visible = [0, 1, 2].map((i) => reviews[(start + i) % count]);
 
   return (
-    <section aria-labelledby="reviews-heading" className="bg-white">
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
+    <section aria-labelledby="reviews-heading" className="bg-white py-16">
+      <div className="mx-auto max-w-site px-6">
         <h2
           id="reviews-heading"
-          className="text-center font-display text-2xl font-bold text-secondary sm:text-3xl"
+          className="mb-11 text-center text-3xl font-bold sm:text-4xl"
         >
           {content.heading}
         </h2>
-
-        <div className="relative mt-8">
+        <div className="flex items-center justify-center gap-[18px]">
           <button
             type="button"
-            onClick={() => scrollBy(-1)}
-            disabled={!canPrev}
             aria-label="Previous review"
-            className={cn(
-              "absolute -left-3 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-divider text-secondary hover:bg-peach-50 sm:flex",
-              !canPrev && "opacity-40",
-            )}
+            onClick={() => setStart((s) => (s - 1 + count) % count)}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-brand-orange bg-white text-brand-orange transition hover:bg-brand-orange hover:text-white"
           >
-            <ArrowIcon className="h-4 w-4 rotate-180" />
+            <ChevronLeftIcon className="h-3 w-3 fill-current" aria-hidden="true" />
           </button>
-          <ul
-            ref={trackRef}
-            className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2"
-          >
-            {content.reviews.map((r, i) => (
-              <li
-                key={i}
-                className="w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[32%]"
-              >
+          <div className="grid flex-1 grid-cols-1 gap-[22px] md:grid-cols-3">
+            {visible.map((r, i) => (
+              <div key={i} className={i === 0 ? "" : "hidden md:block"}>
                 <ReviewCard review={r} />
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
           <button
             type="button"
-            onClick={() => scrollBy(1)}
-            disabled={!canNext}
             aria-label="Next review"
-            className={cn(
-              "absolute -right-3 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-divider text-secondary hover:bg-peach-50 sm:flex",
-              !canNext && "opacity-40",
-            )}
+            onClick={() => setStart((s) => (s + 1) % count)}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-brand-orange bg-white text-brand-orange transition hover:bg-brand-orange hover:text-white"
           >
-            <ArrowIcon className="h-4 w-4" />
+            <ChevronRightIcon className="h-3 w-3 fill-current" aria-hidden="true" />
           </button>
         </div>
       </div>
     </section>
-  );
-}
-
-function ArrowIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }

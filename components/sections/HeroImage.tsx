@@ -1,74 +1,77 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { HeroImageContent } from "@/lib/types";
-import { ButtonLink } from "@/components/ui/Button";
-import { StatBlock } from "./StatBlock";
+import { CalendarIcon, WhatsAppIcon } from "@/components/ui/icons";
 
 export interface HeroImageProps {
   content: HeroImageContent;
 }
 
 export function HeroImage({ content }: HeroImageProps) {
+  const secondaryExternal = content.secondaryCta?.href.startsWith("http");
   return (
-    <section
-      aria-labelledby="hero-title"
-      className="bg-peach-100"
-    >
-      <div className="mx-auto grid max-w-container gap-8 px-4 py-12 sm:py-16 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-6 lg:py-20">
-        <div className="flex flex-col gap-6">
-          {content.eyebrow && (
-            <span className="inline-flex w-fit rounded-pill bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-              {content.eyebrow}
-            </span>
-          )}
-          <h1
-            id="hero-title"
-            className="font-display text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl"
-          >
-            {content.title}
-          </h1>
-          <p className="max-w-xl text-base text-ink-muted sm:text-lg">
-            {content.description}
-          </p>
-          <StatBlock stats={content.stats} />
-          <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
-            <ButtonLink href={content.primaryCta.href} size="lg">
-              {content.primaryCta.label}
-            </ButtonLink>
-            {content.secondaryCta && (
-              <ButtonLink
-                href={content.secondaryCta.href}
-                variant="whatsapp"
-                size="lg"
-                external={content.secondaryCta.href.startsWith("http")}
-                iconLeft={<PhoneIcon className="h-5 w-5" />}
-              >
-                {content.secondaryCta.label}
-              </ButtonLink>
+    <section aria-labelledby="hero-title" className="pt-9">
+      <div className="mx-auto w-full max-w-site px-6">
+        <div className="grid items-center gap-6 overflow-hidden rounded-panel bg-brand-orangeBg px-7 py-10 md:grid-cols-[1.02fr_0.98fr] md:py-0 md:pl-[52px] md:pr-0">
+          <div className="max-w-[540px] py-2 md:py-[52px]">
+            {content.eyebrow && (
+              <span className="mb-4 inline-flex w-fit rounded-pill bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-orange">
+                {content.eyebrow}
+              </span>
             )}
+            <h1
+              id="hero-title"
+              className="mb-[18px] text-[34px] font-extrabold leading-[1.16] tracking-[-0.5px] text-[#111] md:text-5xl"
+            >
+              {content.title}
+            </h1>
+            <p className="mb-7 max-w-[430px] text-[15.5px] leading-[1.7] text-muted">
+              {content.description}
+            </p>
+            <dl className="mb-7 flex gap-6 sm:gap-10">
+              {content.stats.map((s) => (
+                <div key={s.label}>
+                  <dd className="text-[36px] font-extrabold leading-none text-[#111]">
+                    {s.value}
+                  </dd>
+                  <dt className="mt-2 text-[13px] text-subtle">{s.label}</dt>
+                </div>
+              ))}
+            </dl>
+            <div className="flex flex-wrap gap-3.5">
+              <Link
+                href={content.primaryCta.href}
+                className="inline-flex items-center gap-2.5 rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-orange shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]"
+              >
+                <CalendarIcon className="h-[18px] w-[18px]" aria-hidden="true" />
+                {content.primaryCta.label}
+              </Link>
+              {content.secondaryCta && (
+                <a
+                  href={content.secondaryCta.href}
+                  {...(secondaryExternal
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="inline-flex items-center gap-2.5 rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-green shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]"
+                >
+                  <WhatsAppIcon className="h-[18px] w-[18px]" aria-hidden="true" />
+                  {content.secondaryCta.label}
+                </a>
+              )}
+            </div>
           </div>
-        </div>
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-peach-200 lg:aspect-[5/4]">
-          <Image
-            src={content.image.src}
-            alt={content.image.alt}
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
+          <div className="relative min-h-[340px] self-stretch md:min-h-[520px]">
+            <Image
+              src={content.image.src}
+              alt={content.image.alt}
+              fill
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain object-bottom md:object-right-bottom"
+            />
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function PhoneIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <path
-        d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

@@ -1,59 +1,41 @@
 import Image from "next/image";
 import type { TestimonialGalleryContent, TestimonialVideo } from "@/lib/types";
-import { ButtonLink } from "@/components/ui/Button";
+import { PlayIcon, ArrowRightIcon } from "@/components/ui/icons";
 
 export interface TestimonialVideoGalleryProps {
   content: TestimonialGalleryContent;
 }
 
-// Desktop collage uses a 6-cell layout; falls back to a swipeable
-// horizontal carousel (scroll-snap) on mobile so all videos remain reachable.
+// Desktop bento collage (12-col). Mobile falls back to a 2-col grid so every
+// tile stays reachable and the layout matches the design's mosaic feel.
 const cellClasses = [
-  "col-span-2 row-span-2 aspect-square",
-  "col-span-2 row-span-1 aspect-[2/1]",
-  "col-span-2 row-span-2 aspect-square",
-  "col-span-1 row-span-1 aspect-square",
-  "col-span-1 row-span-1 aspect-square",
-  "col-span-2 row-span-1 aspect-[2/1]",
+  "col-span-1 row-span-1 md:col-span-3 md:row-span-2",
+  "col-span-1 row-span-1 md:col-span-3 md:row-span-2",
+  "col-span-2 row-span-2 md:col-span-4 md:row-span-4",
+  "col-span-1 row-span-1 md:col-span-3 md:row-span-2",
+  "col-span-1 row-span-1 md:col-span-3 md:row-span-2",
+  "col-span-2 row-span-1 md:col-span-2 md:row-span-2 md:row-start-2",
 ];
 
 export function TestimonialVideoGallery({ content }: TestimonialVideoGalleryProps) {
   return (
     <section
       aria-labelledby="testimonial-gallery-heading"
-      className="bg-white"
+      className="bg-white py-12 md:py-16"
     >
-      <div className="mx-auto max-w-container px-4 py-12 sm:py-16 lg:px-6 lg:py-20">
+      <div className="mx-auto max-w-site px-6">
         <h2
           id="testimonial-gallery-heading"
-          className="text-center font-display text-2xl font-bold text-secondary sm:text-3xl"
+          className="mb-9 text-center text-2xl font-bold sm:text-3xl md:mb-11 md:text-4xl"
         >
           {content.heading}
         </h2>
 
-        {/* Mobile: swipeable carousel */}
-        <div className="mt-8 lg:hidden">
-          <ul
-            className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2"
-            aria-label="Patient story carousel"
-          >
-            {content.videos.map((v, i) => (
-              <li
-                key={i}
-                className="relative aspect-square w-[70%] shrink-0 snap-start overflow-hidden rounded-2xl bg-secondary/10 sm:w-[45%]"
-              >
-                <VideoTile video={v} />
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Desktop: collage */}
-        <ul className="mt-12 hidden grid-cols-6 grid-rows-2 gap-4 lg:grid">
+        <ul className="mx-auto mb-8 grid max-w-[940px] auto-rows-[110px] grid-cols-2 gap-3 sm:gap-4 md:auto-rows-[100px] md:grid-cols-12">
           {content.videos.slice(0, 6).map((v, i) => (
             <li
               key={i}
-              className={`relative overflow-hidden rounded-2xl bg-secondary/10 ${cellClasses[i] ?? "col-span-2 row-span-1 aspect-[2/1]"}`}
+              className={`group relative overflow-hidden rounded-[10px] shadow-[0_6px_16px_rgba(0,0,0,0.1)] ${cellClasses[i] ?? "col-span-1 row-span-1 md:col-span-3 md:row-span-2"}`}
             >
               <VideoTile video={v} />
             </li>
@@ -61,15 +43,16 @@ export function TestimonialVideoGallery({ content }: TestimonialVideoGalleryProp
         </ul>
 
         {content.viewAll && (
-          <div className="mt-8 flex justify-center">
-            <ButtonLink
+          <div className="flex justify-center">
+            <a
               href={content.viewAll.href}
-              variant="primary"
-              size="md"
-              iconRight={<ArrowIcon className="h-4 w-4" />}
+              className="group inline-flex items-center gap-3 text-base font-bold"
             >
               {content.viewAll.label}
-            </ButtonLink>
+              <span className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-brand-orange transition group-hover:translate-x-1">
+                <ArrowRightIcon className="h-3 w-[9px] fill-white" aria-hidden="true" />
+              </span>
+            </a>
           </div>
         )}
       </div>
@@ -85,40 +68,21 @@ function VideoTile({ video }: { video: TestimonialVideo }) {
   return (
     <Wrapper
       {...wrapperProps}
-      className="group block h-full w-full"
+      className="block h-full w-full"
       aria-label={video.caption}
     >
       <Image
         src={video.poster.src}
         alt={video.poster.alt}
         fill
-        sizes="(min-width: 1024px) 33vw, 70vw"
-        className="object-cover transition group-hover:scale-105"
+        sizes="(min-width: 768px) 33vw, 50vw"
+        className="object-cover"
       />
-      <span className="absolute inset-0 flex items-center justify-center bg-black/15 group-hover:bg-black/25">
-        <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/95 text-primary shadow-md sm:h-14 sm:w-14">
-          <PlayIcon className="ml-0.5 h-5 w-5 sm:h-6 sm:w-6" />
-        </span>
+      <span className="absolute inset-0 bg-black/10" />
+      <span className="absolute left-1/2 top-1/2 flex h-[42px] w-[42px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 transition group-hover:scale-110">
+        <PlayIcon className="ml-0.5 h-4 w-4 fill-brand-orange" aria-hidden="true" />
       </span>
-      {video.caption && (
-        <span className="sr-only">{video.caption}</span>
-      )}
+      {video.caption && <span className="sr-only">{video.caption}</span>}
     </Wrapper>
-  );
-}
-
-function PlayIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props} aria-hidden="true">
-      <path d="M8 5v14l11-7L8 5Z" />
-    </svg>
-  );
-}
-
-function ArrowIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
-      <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
   );
 }
