@@ -215,19 +215,31 @@ export const MicroInjectionIcon = (p: IconProps) => (
   </svg>
 );
 
-// Donor Program — heart resting in an open hand (giving)
+// Donor Program — open hand holding a sample tube + ovum (egg/sperm/embryo donation)
 export const HeartHandsIcon = (p: IconProps) => (
-  <svg viewBox="0 0 48 56" fill="none" {...p}>
-    <path
-      d="M24 10c2.2-2.8 6.4-2.8 8.4 0 2 2.4 1 5.6-8.4 11.6-9.4-6-10.4-9.2-8.4-11.6 2-2.8 6.2-2.8 8.4 0z"
-      fill="currentColor"
-    />
-    <path
-      d="M7 33c0-1.8 1.4-2.8 3.2-2.6 5 .6 9.4 2.6 14.8 2.6h8c2.2 0 2.8 2.8.4 3.6l-9.6 3.2c-3.2 1-6.6 1-9.8-.2l-4.4-1.6C8 39.6 7 38.4 7 36z"
-      stroke="currentColor"
-      strokeWidth={3}
-      strokeLinejoin="round"
-    />
+  <svg
+    viewBox="0 0 64 64"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2.4}
+    strokeLinejoin="round"
+    strokeLinecap="round"
+    {...p}
+  >
+    {/* test tube */}
+    <rect x="19" y="5" width="13" height="31" rx="1.5" />
+    <path d="M18 10.5h15" />
+    <path d="M22.5 5v4.5M26 5v3.5M29.5 5v4.5" />
+    <path d="M23 20h7" />
+    <path d="M26 26.5c1.5 0 2.1-1.5 1-2.6-.7-.6-1.8-.1-1.3 1.1z" />
+    <path d="M28 31.5c1.5 0 2.1-1.5 1-2.6-.7-.6-1.8-.1-1.3 1.1z" />
+    {/* ovum with scalloped corona */}
+    <path d="M46 13q2 .2 2.4 2.2 2 .3 2.1 2.3 2 .8 1.4 2.6 1.7 1.2.7 2.9 1.4 1.6 0 3 .6 1.7-.8 3 1.1 1.6-.2 2.8-1.3 1.4-2.7 1.3-.6 1.8-2.4 2.4-1 1.5-2.9 1.1-1.5 1.4-2.8.4-1.7 1-3-.9-1.8.3-3-1.2-1.7.1-2.8-1.4-1.7-.4-1.8-2.4-1.9-.7-1.4-2.6-1.6-1.2-.7-2.9-1.4-1.6.1-3-.6-1.6.7-2.9-1.1-1.7.3-2.8 1.3-1.4 2.7-1.3.6-1.8 2.4-2.4 1-1.5 2.9-1.1 1.5-1.4 2.8-.4 1.7-1 3 .9 1.8-.3 3 1.2 1.7-.1 2.9 1.4 1.6.4 1.8 2.4 1.9.7 1.4 2.6z" />
+    <circle cx="46" cy="24" r="6.5" />
+    <circle cx="44.5" cy="22.5" r="2" />
+    {/* open cupped hand */}
+    <rect x="5" y="40" width="9" height="18" rx="1" />
+    <path d="M14 43.5c4.5-1 9.5-1 14 1.2 2.2 1 4.4 1.3 6.2 1.3h11.5c2.6 0 2.6 3.6 0 4l-12 2.1c-3.2.6-5.3 1.7-7.5 3.2l-3.5 2.4c-1.7 1.2-3.7 1.3-5.6.6L14 57.5" />
   </svg>
 );
 
