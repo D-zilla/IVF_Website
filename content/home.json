@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "title": "Alchemy IVF — Advanced Fertility & IVF Care",
+    "description": "World-class IVF, IUI, ICSI, donor program and fertility preservation care from experienced specialists in Kathmandu.",
+    "canonical": "/"
+  },
+  "hero": {
+    "title": "Alchemy IVF Where Science Meets Miracles",
+    "description": "With world-class labs, expert guidance, and proven success, we support couples at every stage of their fertility journey with clarity, care, and confidence.",
+    "stats": [
+      { "value": "20+", "label": "Years of experience" },
+      { "value": "5K+", "label": "Babies delivered" },
+      { "value": "95%", "label": "Patient satisfaction" }
+    ],
+    "primaryCta": { "label": "Book Appointment", "href": "/contact" },
+    "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" },
+    "image": {
+      "src": "/images/hero-family.svg",
+      "alt": "A couple holds their newborn baby in a moment of quiet joy",
+      "width": 800,
+      "height": 600
+    }
+  },
+  "specialties": {
+    "heading": "Our Specialties",
+    "items": [
+      {
+        "title": "IVF",
+        "description": "In-vitro fertilisation tailored to each couple's needs.",
+        "ctaLabel": "Learn more",
+        "href": "/treatments/ivf"
+      },
+      {
+        "title": "IUI",
+        "description": "Intrauterine insemination for selected fertility cases.",
+        "ctaLabel": "Learn more",
+        "href": "/treatments/iui"
+      },
+      {
+        "title": "ICSI",
+        "description": "Single-sperm injection for severe male-factor cases.",
+        "ctaLabel": "Learn more",
+        "href": "/treatments/icsi"
+      },
+      {
+        "title": "Donor Program",
+        "description": "Screened egg, sperm and embryo donor pathways.",
+        "ctaLabel": "Learn more",
+        "href": "/treatments/donor-program"
+      },
+      {
+        "title": "Fertility Preservation",
+        "description": "Egg, sperm and embryo freezing for future use.",
+        "ctaLabel": "Learn more",
+        "href": "/treatments/fertility-preservation"
+      }
+    ]
+  },
+  "trust": {
+    "heading": "Why Patients Trust Us",
+    "description": "At Alchemy IVF, we realise that the path to parenthood is unique for everyone. Hence, we offer all our patients the highest levels of care and support in a friendly and welcoming environment at every stage of their treatment.",
+    "points": [
+      "Your privacy is our priority",
+      "Advanced technology & labs",
+      "Real patient success stories",
+      "Transparent process & pricing"
+    ],
+    "highlights": [
+      { "title": "Personal Care" },
+      { "title": "Modern Labs" },
+      { "title": "Skilled Embryologists" },
+      { "title": "Counselling Support" },
+      { "title": "Genetic Screening" },
+      { "title": "Aftercare Program" }
+    ],
+    "primaryCta": { "label": "Book Appointment", "href": "/contact" },
+    "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" }
+  },
+  "doctors": {
+    "heading": "Our Experts",
+    "doctors": [
+      {
+        "name": "Dr. Priya Sharma",
+        "title": "IVF Specialist",
+        "image": { "src": "/images/doctor-1.svg", "alt": "Portrait of Dr. Priya Sharma" },
+        "href": "/doctors/priya-sharma"
+      },
+      {
+        "name": "Dr. Anil Adhikari",
+        "title": "Reproductive Endocrinologist",
+        "image": { "src": "/images/doctor-2.svg", "alt": "Portrait of Dr. Anil Adhikari" },
+        "href": "/doctors/anil-adhikari"
+      },
+      {
+        "name": "Dr. Meera Karki",
+        "title": "Embryologist",
+        "image": { "src": "/images/doctor-3.svg", "alt": "Portrait of Dr. Meera Karki" },
+        "href": "/doctors/meera-karki"
+      },
+      {
+        "name": "Dr. Suresh Thapa",
+        "title": "Andrologist",
+        "image": { "src": "/images/doctor-4.svg", "alt": "Portrait of Dr. Suresh Thapa" },
+        "href": "/doctors/suresh-thapa"
+      },
+      {
+        "name": "Dr. Rita Gurung",
+        "title": "Fertility Counsellor",
+        "image": { "src": "/images/doctor-5.svg", "alt": "Portrait of Dr. Rita Gurung" },
+        "href": "/doctors/rita-gurung"
+      }
+    ],
+    "viewAll": { "label": "View All", "href": "/doctors" }
+  },
+  "testimonials": {
+    "heading": "What Our Happy Couples Are Saying",
+    "videos": [
+      {
+        "poster": { "src": "/images/story-1.svg", "alt": "Couple sharing their IVF success story" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder1",
+        "caption": "Aarti and Rohan's IVF journey"
+      },
+      {
+        "poster": { "src": "/images/story-2.svg", "alt": "Patient speaking to camera during interview" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder2",
+        "caption": "Sita's IUI story"
+      },
+      {
+        "poster": { "src": "/images/story-3.svg", "alt": "Doctor in a clinic with a patient" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder3",
+        "caption": "Inside our embryology lab"
+      },
+      {
+        "poster": { "src": "/images/story-4.svg", "alt": "Smiling parents with their baby" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder4",
+        "caption": "Bishnu and Prerna's first child"
+      },
+      {
+        "poster": { "src": "/images/story-5.svg", "alt": "Counselling session at the clinic" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder5",
+        "caption": "Counselling helped us through"
+      },
+      {
+        "poster": { "src": "/images/story-6.svg", "alt": "Patient walking through the clinic" },
+        "videoUrl": "https://www.youtube.com/watch?v=placeholder6",
+        "caption": "Why we chose Alchemy IVF"
+      }
+    ],
+    "viewAll": { "label": "View All Patient Stories", "href": "/blog/patient-stories" }
+  },
+  "whyChoose": {
+    "heading": "Why Choose Alchemy IVF?",
+    "features": [
+      {
+        "title": "Expert Doctors",
+        "description": "Decades of combined fertility experience"
+      },
+      {
+        "title": "International Standards",
+        "description": "Accredited labs and embryology protocols"
+      },
+      {
+        "title": "Medical Tourism",
+        "description": "Seamless travel and accommodation support"
+      },
+      {
+        "title": "Holistic Support",
+        "description": "Counselling, nutrition and aftercare"
+      }
+    ]
+  },
+  "reviews": {
+    "heading": "Our Reviews",
+    "reviews": [
+      {
+        "author": "Awwan Shakh",
+        "timeAgo": "22 hours ago",
+        "rating": 5,
+        "body": "Yes I was taking hair treatment from Dr Batra and got visible results, and the staff and management was amazing.",
+        "sourceLabel": "Google"
+      },
+      {
+        "author": "Ramesh Bista",
+        "timeAgo": "3 days ago",
+        "rating": 5,
+        "body": "The consultation was thorough and the doctors took the time to explain every step of our treatment plan.",
+        "sourceLabel": "Google"
+      },
+      {
+        "author": "Anita Khanal",
+        "timeAgo": "1 week ago",
+        "rating": 5,
+        "body": "After two failed attempts elsewhere, the team at Alchemy guided us with care and our IVF cycle finally succeeded.",
+        "sourceLabel": "Google"
+      },
+      {
+        "author": "Bikash Tamang",
+        "timeAgo": "2 weeks ago",
+        "rating": 5,
+        "body": "Modern labs, transparent pricing and a genuinely caring counselling team. Highly recommend.",
+        "sourceLabel": "Google"
+      },
+      {
+        "author": "Sunita Magar",
+        "timeAgo": "1 month ago",
+        "rating": 4,
+        "body": "Clean clinic, professional staff and clear post-procedure instructions. Wait times could be a little shorter.",
+        "sourceLabel": "Google"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What conditions does Alchemy IVF treat?",
+        "answer": "We treat male and female infertility including tubal factor, PCOS, endometriosis, low ovarian reserve, male factor infertility and unexplained infertility."
+      },
+      {
+        "question": "How long does a full IVF cycle take?",
+        "answer": "A typical IVF cycle, from initial stimulation to embryo transfer, takes about four to six weeks. Frozen embryo transfers may be scheduled in a later cycle."
+      },
+      {
+        "question": "What is the success rate of IVF at your clinic?",
+        "answer": "Outcomes depend on age, diagnosis and treatment plan. During your consultation we share clinic-specific live-birth rates for couples in a similar profile to yours."
+      },
+      {
+        "question": "Do you offer fertility preservation for cancer patients?",
+        "answer": "Yes. We work closely with oncology teams to offer fast-track egg, sperm and embryo freezing before cancer treatment begins."
+      },
+      {
+        "question": "Is donor egg or donor sperm available?",
+        "answer": "We run a fully screened donor egg, donor sperm and donor embryo program with thorough medical, genetic and infectious-disease testing."
+      },
+      {
+        "question": "How much does IVF cost?",
+        "answer": "We publish transparent package pricing. Final cost depends on medication, the number of cycles and add-ons such as PGT-A. Our team shares a written estimate before you commit."
+      },
+      {
+        "question": "Do you support international patients?",
+        "answer": "Yes. Our medical tourism desk assists with visa letters, airport pickup, hotel bookings and remote follow-up consultations."
+      },
+      {
+        "question": "What is the first step to start treatment?",
+        "answer": "Book an initial consultation with one of our fertility specialists. They will review your history, request baseline tests and outline a personalised treatment plan."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Start Your Journey?",
+    "description": "Take the first step towards parenthood with our expert fertility specialists. We're here to support you every step of the way with personalised care and cutting-edge treatments.",
+    "primaryCta": { "label": "Book Consultation", "href": "/contact" },
+    "secondaryCta": { "label": "Call Us Now", "href": "tel:+9779828528805" },
+    "trustItems": ["100% Confidential", "Expert Specialists", "24/7 Support"]
+  }
+}

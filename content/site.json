@@ -1,0 +1,77 @@
+{
+  "topBar": {
+    "location": "Kathmandu, Nepal",
+    "phone": {
+      "label": "Call us",
+      "display": "+977 9828528805",
+      "tel": "+9779828528805"
+    }
+  },
+  "header": {
+    "brand": {
+      "name": "Alchemy IVF",
+      "tagline": "Advanced reproductive care",
+      "logoAlt": "Alchemy IVF logo"
+    },
+    "nav": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" },
+      { "label": "Treatments", "href": "/treatments" },
+      { "label": "Doctors", "href": "/doctors" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "ctaLabel": "Contact Us",
+    "ctaHref": "/contact"
+  },
+  "footer": {
+    "brand": {
+      "name": "Alchemy IVF",
+      "tagline": "Advanced reproductive care",
+      "logoAlt": "Alchemy IVF logo"
+    },
+    "description": "Bringing hope, healing, and advanced reproductive care to families worldwide.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "About", "href": "/about" },
+        { "label": "Services", "href": "/treatments" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    "services": {
+      "title": "Services",
+      "links": [
+        { "label": "Counseling & Fertility Consultation", "href": "/treatments/counseling" },
+        { "label": "Laparoscopy & Hysteroscopy", "href": "/treatments/laparoscopy-hysteroscopy" },
+        { "label": "Gestational Carrier", "href": "/treatments/gestational-carrier" }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": {
+        "label": "Address",
+        "value": "Kathmandu, Nepal"
+      },
+      "phones": [
+        {
+          "label": "Nepal",
+          "value": "+977 9828528805",
+          "href": "tel:+9779828528805"
+        },
+        {
+          "label": "Dubai",
+          "value": "+971 55 799 5638",
+          "href": "tel:+971557995638"
+        }
+      ]
+    },
+    "copyright": "© 2026 All Rights Reserved."
+  },
+  "whatsapp": {
+    "number": "9779828528805",
+    "label": "Chat on WhatsApp",
+    "defaultMessage": "Hi, I'd like to know more about Alchemy IVF."
+  }
+}

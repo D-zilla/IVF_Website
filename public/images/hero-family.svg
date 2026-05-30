@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Family with newborn placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE0C7"/>
+      <stop offset="100%" stop-color="#FFF1E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="320" cy="240" r="90" fill="#F58A3F" opacity="0.25"/>
+  <circle cx="480" cy="260" r="110" fill="#102A56" opacity="0.18"/>
+  <rect x="280" y="330" width="240" height="180" rx="30" fill="#FFFFFF" opacity="0.6"/>
+  <text x="400" y="430" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#102A56">Hero image placeholder</text>
+</svg>

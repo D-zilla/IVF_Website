@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Contact Alchemy IVF — Book a Free Consultation",
+    "description": "Speak to an Alchemy IVF fertility advisor. Get a confidential consultation, treatment guidance and clear pricing within 15 minutes.",
+    "canonical": "/contact"
+  },
+  "hero": {
+    "trust": {
+      "badgeLabel": "Trusted by millions",
+      "avatars": [
+        { "src": "/images/avatar-1.svg", "alt": "" },
+        { "src": "/images/avatar-2.svg", "alt": "" },
+        { "src": "/images/avatar-3.svg", "alt": "" },
+        { "src": "/images/avatar-4.svg", "alt": "" }
+      ],
+      "rating": "4.84",
+      "reviewsLabel": "1,000+",
+      "trustLine": "Trusted by millions."
+    },
+    "titleHighlight": "Struggling to Start or Grow Your Family?",
+    "title": "Start Your Doctor-Guided Fertility Program Today.",
+    "description": "Improve your chances of conception with Alchemy IVF's scientifically validated fertility programs, modern labs and personalised medical monitoring.",
+    "features": [
+      {
+        "icon": "calendar",
+        "title": "15+",
+        "subtitle": "Years of Clinical Experience"
+      },
+      {
+        "icon": "users",
+        "title": "1 Lakh+",
+        "subtitle": "Patients Counselled"
+      },
+      {
+        "icon": "heart",
+        "title": "Doctor-Guided",
+        "subtitle": "Personalised Care"
+      }
+    ],
+    "form": {
+      "title": "Get a Free Consultation",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your Name",
+          "placeholder": "Full Name",
+          "required": true,
+          "type": "text"
+        },
+        {
+          "name": "phone",
+          "label": "Enter your phone number",
+          "placeholder": "10-digit mobile number",
+          "required": true,
+          "type": "tel",
+          "inputMode": "tel",
+          "pattern": "[0-9]{10}",
+          "maxLength": 10
+        },
+        {
+          "name": "pincode",
+          "label": "Pincode",
+          "placeholder": "6-digit pincode",
+          "required": true,
+          "type": "text",
+          "inputMode": "numeric",
+          "pattern": "[0-9]{6}",
+          "maxLength": 6
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "placeholder": "Email address",
+          "required": false,
+          "type": "email",
+          "inputMode": "email"
+        }
+      ],
+      "submitLabel": "Get a Free Consultation",
+      "reassurance": "Your information is secure and confidential. We'll contact you within 15 minutes.",
+      "disclaimer": "Free consultation: No commitment required. Speak with a health advisor to understand if our program is right for you."
+    },
+    "whatsappCta": {
+      "label": "WhatsApp Call",
+      "href": "https://wa.me/9779828528805"
+    }
+  },
+  "compliance": {
+    "heading": "Compliance Notice",
+    "bullets": [
+      "Your details are kept completely confidential",
+      "Our health advisor will guide you without obligation",
+      "Programs are for stable, non-emergency cases only",
+      "Not a replacement for emergency medical treatment",
+      "Always consult your treating physician",
+      "Results vary depending on adherence and health condition"
+    ],
+    "image": {
+      "src": "/images/compliance-illustration.svg",
+      "alt": "Line illustration of a mother holding her newborn child"
+    }
+  }
+}

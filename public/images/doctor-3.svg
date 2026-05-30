@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Doctor portrait placeholder">
+  <rect width="200" height="200" fill="hsl(140, 65%, 90%)"/>
+  <circle cx="100" cy="80" r="38" fill="hsl(140, 55%, 55%)"/>
+  <path d="M30 200 C 30 140, 170 140, 170 200 Z" fill="hsl(140, 55%, 55%)"/>
+  <text x="100" y="190" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#FFFFFF">Doctor 3</text>
+</svg>
