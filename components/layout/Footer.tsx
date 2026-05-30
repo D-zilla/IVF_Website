@@ -72,8 +72,8 @@ function FooterColumn({ column }: { column: FooterContent["quickLinks"] }) {
     <div>
       <h2 className="mb-[22px] text-[22px] font-bold">{column.title}</h2>
       <ul className="flex flex-col gap-3.5 text-[15px] text-[#dfe3ee]">
-        {column.links.map((link) => (
-          <li key={link.href}>
+        {column.links.map((link, i) => (
+          <li key={`${link.href}-${i}`}>
             <Link href={link.href} className="hover:text-brand-orange">
               {link.label}
             </Link>
