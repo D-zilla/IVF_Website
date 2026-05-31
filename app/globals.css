@@ -16,6 +16,8 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid theme("colors.brand.orange");
+  /* brand.orange (#EF7623) — hardcoded so the CSS language server doesn't
+     flag the Tailwind theme() call; build resolves either way. */
+  outline: 2px solid #ef7623;
   outline-offset: 2px;
 }
