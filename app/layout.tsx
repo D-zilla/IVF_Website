@@ -24,27 +24,37 @@ const clinicSchema = medicalClinicSchema({ site: content });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Advanced Fertility & IVF Care`,
+    default: `${SITE_NAME} — Best IVF & Fertility Centre in Kathmandu, Nepal`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Alchemy IVF — advanced fertility, IVF, IUI, ICSI, donor program and fertility preservation in Kathmandu.",
+    "Alchemy IVF is a leading fertility clinic in Kathmandu, Nepal offering IVF, IUI, ICSI, donor programs and fertility preservation. Expert doctors, world-class embryology lab and personalised, confidential care.",
+  keywords: [
+    "IVF Kathmandu",
+    "IVF centre Nepal",
+    "fertility clinic Kathmandu",
+    "IUI Nepal",
+    "ICSI treatment",
+    "infertility treatment Nepal",
+    "best IVF doctor Kathmandu",
+    "test tube baby Nepal",
+  ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Advanced Fertility & IVF Care`,
+    title: `${SITE_NAME} — Best IVF & Fertility Centre in Kathmandu, Nepal`,
     description:
-      "Advanced fertility & IVF care from experienced specialists in Kathmandu.",
+      "Leading IVF & fertility clinic in Kathmandu offering IVF, IUI, ICSI, donor programs and fertility preservation with expert doctors and a world-class lab.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Advanced Fertility & IVF Care`,
+    title: `${SITE_NAME} — Best IVF & Fertility Centre in Kathmandu, Nepal`,
     description:
-      "Advanced fertility & IVF care from experienced specialists in Kathmandu.",
+      "Leading IVF & fertility clinic in Kathmandu offering IVF, IUI, ICSI, donor programs and fertility preservation.",
     images: [DEFAULT_OG_IMAGE.url],
   },
   robots: { index: true, follow: true },

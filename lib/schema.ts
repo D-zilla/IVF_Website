@@ -8,7 +8,7 @@ export interface MedicalClinicArgs {
   imagePath?: string;
 }
 
-export function medicalClinicSchema({ site, imagePath = "/images/hero-family.svg" }: MedicalClinicArgs) {
+export function medicalClinicSchema({ site, imagePath = "/images/hero-hands.png" }: MedicalClinicArgs) {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
@@ -16,7 +16,7 @@ export function medicalClinicSchema({ site, imagePath = "/images/hero-family.svg
     url: SITE_URL,
     image: `${SITE_URL}${imagePath}`,
     description:
-      "Advanced fertility & IVF clinic offering IVF, IUI, ICSI, donor program and fertility preservation.",
+      "Alchemy IVF is a leading fertility and IVF clinic in Kathmandu, Nepal, offering IVF, IUI, ICSI, donor egg/sperm programs and fertility preservation with an internationally accredited embryology lab.",
     address: {
       "@type": "PostalAddress",
       addressLocality: site.topBar.location.split(",")[0]?.trim(),

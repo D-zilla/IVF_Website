@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import type { PageMeta } from "./types";
 
+// TODO: replace with the real production domain before launch (used for
+// canonical URLs, Open Graph, sitemap and JSON-LD).
 export const SITE_URL = "https://example.com";
 export const SITE_NAME = "Alchemy IVF";
 export const DEFAULT_OG_IMAGE = {
-  url: "/images/hero-family.svg",
+  url: "/images/hero-hands.png",
   width: 800,
   height: 600,
-  alt: "Alchemy IVF clinic preview",
+  alt: "Alchemy IVF — fertility & IVF clinic in Kathmandu, Nepal",
 };
 
 export function buildMetadata(meta: PageMeta): Metadata {

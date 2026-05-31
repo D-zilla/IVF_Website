@@ -16,7 +16,7 @@ export function DoctorsGrid({ content }: DoctorsGridProps) {
         >
           {content.heading}
         </h2>
-        <ul className="mb-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mx-auto mb-9 grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {content.doctors.map((doctor) => (
             <li key={doctor.name}>
               <DoctorCard doctor={doctor} />

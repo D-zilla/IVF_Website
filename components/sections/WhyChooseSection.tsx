@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { WhyChooseSectionContent } from "@/lib/types";
-import { DropletIcon } from "@/components/ui/icons";
+import { FeatureIcon } from "@/components/ui/FeatureIcon";
 
 export interface WhyChooseSectionProps {
   content: WhyChooseSectionContent;
@@ -30,7 +30,10 @@ export function WhyChooseSection({ content }: WhyChooseSectionProps) {
                     className="mx-auto mb-4 h-[54px] w-[46px]"
                   />
                 ) : (
-                  <DropletIcon className="mx-auto mb-4 h-[54px] w-[46px] text-white" aria-hidden="true" />
+                  <FeatureIcon
+                    name={f.icon ?? "care"}
+                    className="mx-auto mb-4 h-[46px] w-[46px] text-white"
+                  />
                 )}
                 <h3 className="mb-2 text-[17px] font-bold">{f.title}</h3>
                 {f.description && (

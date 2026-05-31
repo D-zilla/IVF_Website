@@ -1,6 +1,6 @@
 import type { CTASectionContent } from "@/lib/types";
+import { MotherChildIcon } from "@/components/ui/MotherChildIcon";
 import {
-  HeartPulseIcon,
   CalendarIcon,
   PhoneIcon,
   ShieldIcon,
@@ -21,7 +21,7 @@ export function CTASection({ content }: CTASectionProps) {
       <div className="mx-auto max-w-site px-6">
         <div className="rounded-[18px] bg-[radial-gradient(120%_140%_at_50%_0%,#1f3160_0%,#0e1c40_60%,#0b1733_100%)] px-7 py-14 text-center text-white md:px-10 md:pb-[60px] md:pt-14">
           <div className="mx-auto mb-6 flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[rgba(120,160,255,0.3)] bg-[rgba(56,98,196,0.35)]">
-            <HeartPulseIcon className="h-7 w-7 fill-[#7aa0ff]" aria-hidden="true" />
+            <MotherChildIcon className="h-9 w-9 text-[#7aa0ff]" aria-hidden="true" />
           </div>
           <h2
             id="cta-heading"

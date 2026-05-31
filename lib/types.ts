@@ -127,20 +127,13 @@ export interface HeroFormContent {
 
 // ---------- specialty card grid ----------
 
-export type SpecialtyIcon =
-  | "embryo"
-  | "syringe"
-  | "microInjection"
-  | "heartHands"
-  | "snowflake"
-  | "droplet";
-
 export interface SpecialtyCardContent {
   title: string;
   description?: string;
   ctaLabel: string;
   href: string;
-  icon?: SpecialtyIcon;
+  /** Registry name resolved by <FeatureIcon> (e.g. "ivf", "iui"). */
+  icon?: string;
   iconSrc?: string;
 }
 
@@ -153,6 +146,8 @@ export interface SpecialtiesSectionContent {
 
 export interface TrustHighlight {
   title: string;
+  /** Registry name resolved by <FeatureIcon> (e.g. "care", "ovum"). */
+  icon?: string;
   iconSrc?: string;
 }
 
@@ -199,6 +194,8 @@ export interface TestimonialGalleryContent {
 export interface WhyChooseFeature {
   title: string;
   description?: string;
+  /** Registry name resolved by <FeatureIcon> (e.g. "doctors", "labs"). */
+  icon?: string;
   iconSrc?: string;
 }
 

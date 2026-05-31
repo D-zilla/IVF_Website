@@ -32,8 +32,9 @@ export const DropletIcon = (p: IconProps) => (
 );
 
 export const WhatsAppIcon = (p: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...p}>
-    <path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02zM12.04 20.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23z" />
+  <svg viewBox="0 0 32 32" fill="currentColor" {...p}>
+    <path d="M27.2 4.7A13.4 13.4 0 0 0 5.9 20.9L4 28l7.3-1.9a13.4 13.4 0 0 0 6.4 1.6h.01c7.4 0 13.4-6 13.4-13.4 0-3.6-1.4-7-3.9-9.6zM16.7 25.4h-.01a11.1 11.1 0 0 1-5.7-1.6l-.4-.24-4.2 1.1 1.12-4.1-.27-.42a11.1 11.1 0 0 1-1.7-5.9c0-6.1 5-11.1 11.1-11.1a11 11 0 0 1 7.85 3.26 11 11 0 0 1 3.25 7.86c0 6.1-5 11.1-11.1 11.1z" />
+    <path d="M22.8 18.6c-.33-.17-1.97-.97-2.27-1.08-.3-.11-.53-.17-.75.17-.22.33-.86 1.08-1.05 1.3-.2.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.65-1.97-1.85-2.3-.19-.33-.02-.51.15-.67.15-.15.33-.39.5-.58.17-.2.22-.33.33-.55.11-.22.06-.42-.03-.58-.08-.17-.75-1.8-1.03-2.47-.27-.65-.55-.56-.75-.57l-.64-.01c-.22 0-.58.08-.89.42-.3.33-1.16 1.14-1.16 2.77s1.19 3.21 1.36 3.44c.17.22 2.34 3.58 5.67 5.02.79.34 1.41.55 1.89.7.79.25 1.52.22 2.09.13.64-.1 1.97-.8 2.25-1.58.28-.78.28-1.44.2-1.58-.08-.14-.3-.22-.63-.39z" />
   </svg>
 );
 
@@ -188,23 +189,6 @@ export const EmbryoIcon = (p: IconProps) => (
   </svg>
 );
 
-// IUI — filled syringe dipping into a sample (gentle insemination)
-export const SyringeIcon = (p: IconProps) => (
-  <svg viewBox="0 0 56 56" fill="none" {...p}>
-    {/* sample circle: light tint of the brand orange */}
-    <circle cx="40" cy="40" r="13" fill="#FDCFAF" />
-    <g fill="currentColor" transform="rotate(45 28 28)">
-      <rect x="3" y="24.5" width="3" height="9" rx="1.5" />
-      <rect x="6" y="27.5" width="8" height="3" rx="1.5" />
-      <rect x="13" y="23" width="3.5" height="12" rx="1.5" />
-      <rect x="16" y="24.5" width="20" height="9" rx="2.5" />
-      <circle cx="25" cy="29" r="2.6" fill="#FFFFFF" />
-      <path d="M36 25.5h3l-1 8h-2z" />
-      <rect x="39" y="28" width="10" height="2" rx="1" />
-    </g>
-  </svg>
-);
-
 // ICSI — egg held by a pipette with an injecting needle (single-sperm injection)
 export const MicroInjectionIcon = (p: IconProps) => (
   <svg viewBox="0 0 48 56" fill="none" {...p}>
@@ -215,40 +199,14 @@ export const MicroInjectionIcon = (p: IconProps) => (
   </svg>
 );
 
-// Donor Program — open hand holding a sample tube + ovum (egg/sperm/embryo donation)
-export const HeartHandsIcon = (p: IconProps) => (
-  <svg
-    viewBox="0 0 64 64"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2.4}
-    strokeLinejoin="round"
-    strokeLinecap="round"
-    {...p}
-  >
-    {/* test tube */}
-    <rect x="19" y="5" width="13" height="31" rx="1.5" />
-    <path d="M18 10.5h15" />
-    <path d="M22.5 5v4.5M26 5v3.5M29.5 5v4.5" />
-    <path d="M23 20h7" />
-    <path d="M26 26.5c1.5 0 2.1-1.5 1-2.6-.7-.6-1.8-.1-1.3 1.1z" />
-    <path d="M28 31.5c1.5 0 2.1-1.5 1-2.6-.7-.6-1.8-.1-1.3 1.1z" />
-    {/* ovum with scalloped corona */}
-    <path d="M46 13q2 .2 2.4 2.2 2 .3 2.1 2.3 2 .8 1.4 2.6 1.7 1.2.7 2.9 1.4 1.6 0 3 .6 1.7-.8 3 1.1 1.6-.2 2.8-1.3 1.4-2.7 1.3-.6 1.8-2.4 2.4-1 1.5-2.9 1.1-1.5 1.4-2.8.4-1.7 1-3-.9-1.8.3-3-1.2-1.7.1-2.8-1.4-1.7-.4-1.8-2.4-1.9-.7-1.4-2.6-1.6-1.2-.7-2.9-1.4-1.6.1-3-.6-1.6.7-2.9-1.1-1.7.3-2.8 1.3-1.4 2.7-1.3.6-1.8 2.4-2.4 1-1.5 2.9-1.1 1.5-1.4 2.8-.4 1.7-1 3 .9 1.8-.3 3 1.2 1.7-.1 2.9 1.4 1.6.4 1.8 2.4 1.9.7 1.4 2.6z" />
-    <circle cx="46" cy="24" r="6.5" />
-    <circle cx="44.5" cy="22.5" r="2" />
-    {/* open cupped hand */}
-    <rect x="5" y="40" width="9" height="18" rx="1" />
-    <path d="M14 43.5c4.5-1 9.5-1 14 1.2 2.2 1 4.4 1.3 6.2 1.3h11.5c2.6 0 2.6 3.6 0 4l-12 2.1c-3.2.6-5.3 1.7-7.5 3.2l-3.5 2.4c-1.7 1.2-3.7 1.3-5.6.6L14 57.5" />
+// Ovum + sperm (embryology) — used by the IVF logo mark family and the
+// "Skilled Embryologists" trust tile.
+export const OvumIcon = (p: IconProps) => (
+  <svg viewBox="0 0 56 56" fill="none" {...p}>
+    <circle cx="31" cy="22" r="12" stroke="currentColor" strokeWidth={3} />
+    <circle cx="31" cy="22" r="4.5" fill="currentColor" />
+    <circle cx="9" cy="46" r="3.2" fill="currentColor" />
+    <path d="M11.5 44.5c2.5-2.5 5-4.5 7-8" stroke="currentColor" strokeWidth={3} strokeLinecap="round" />
   </svg>
 );
 
-// Fertility Preservation — snowflake (cryo freezing)
-export const SnowflakeIcon = (p: IconProps) => (
-  <svg viewBox="0 0 48 56" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" {...p}>
-    <path d="M24 9v38M8 18l32 19M40 18L8 37" />
-    <path d="M24 16l-5-5M24 16l5-5M24 40l-5 5M24 40l5 5" />
-    <path d="M13 22l-6.5-1.5M13 22l1.5-6.5M35 33l6.5 1.5M35 33l-1.5 6.5" />
-    <path d="M35 22l6.5-1.5M35 22l-1.5-6.5M13 33l-6.5 1.5M13 33l1.5 6.5" />
-  </svg>
-);

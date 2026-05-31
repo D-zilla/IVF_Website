@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Contact Alchemy IVF — Book a Free Consultation",
-    "description": "Speak to an Alchemy IVF fertility advisor. Get a confidential consultation, treatment guidance and clear pricing within 15 minutes.",
+    "title": "Book a Free IVF Consultation in Kathmandu | Contact Alchemy IVF",
+    "description": "Contact Alchemy IVF, Kathmandu for a free, confidential fertility consultation. Talk to an IVF specialist about IVF, IUI, ICSI and donor programs. We'll call you back within 15 minutes.",
     "canonical": "/contact"
   },
   "hero": {
     "trust": {
-      "badgeLabel": "Trusted by millions",
+      "badgeLabel": "Trusted by thousands of families",
       "avatars": [
         { "src": "/images/avatars.png", "alt": "" },
         { "src": "/images/avatars.png", "alt": "" },
@@ -16,27 +16,27 @@
       ],
       "rating": "4.84",
       "ratingMax": "5",
-      "reviewsLabel": "1,000+",
-      "trustLine": "Trusted by millions."
+      "reviewsLabel": "1,000+ reviews",
+      "trustLine": "Rated 4.84/5 by couples across Nepal."
     },
     "titleHighlight": "Struggling to Start or Grow Your Family?",
-    "title": "Start Your Doctor-Guided Fertility Program Today.",
-    "description": "Improve your chances of conception with Alchemy IVF's scientifically validated fertility programs, modern labs and personalised medical monitoring.",
+    "title": "Begin Your Doctor-Guided Fertility Journey Today.",
+    "description": "Take the first step with Alchemy IVF, Kathmandu. Our fertility specialists review your history, recommend the right treatment — IVF, IUI, ICSI or a donor program — and build a personalised plan to improve your chances of conception.",
     "features": [
       {
         "icon": "calendar",
-        "title": "15+",
-        "subtitle": "Years of Clinical Experience"
+        "title": "20+ Years",
+        "subtitle": "Of Fertility Experience"
       },
       {
         "icon": "users",
-        "title": "1 Lakh+",
-        "subtitle": "Patients Counselled"
+        "title": "5,000+",
+        "subtitle": "Happy Families"
       },
       {
         "icon": "heart",
         "title": "Doctor-Guided",
-        "subtitle": "Personalised Care"
+        "subtitle": "Personalised IVF Care"
       }
     ],
     "form": {
@@ -51,7 +51,7 @@
         },
         {
           "name": "phone",
-          "label": "Enter your phone number",
+          "label": "Phone / WhatsApp Number",
           "placeholder": "10-digit mobile number",
           "required": true,
           "type": "tel",
@@ -60,14 +60,11 @@
           "maxLength": 10
         },
         {
-          "name": "pincode",
-          "label": "Pincode",
-          "placeholder": "6-digit pincode",
+          "name": "city",
+          "label": "City",
+          "placeholder": "e.g. Kathmandu, Pokhara",
           "required": true,
-          "type": "text",
-          "inputMode": "numeric",
-          "pattern": "[0-9]{6}",
-          "maxLength": 6
+          "type": "text"
         },
         {
           "name": "email",
@@ -79,8 +76,8 @@
         }
       ],
       "submitLabel": "Get a Free Consultation",
-      "reassurance": "Your information is secure and confidential. We'll contact you within 15 minutes.",
-      "disclaimer": "Free consultation: No commitment required. Speak with a health advisor to understand if our program is right for you."
+      "reassurance": "Your information is 100% secure and confidential. Our team will call you back within 15 minutes.",
+      "disclaimer": "Free consultation, no obligation: Speak with a fertility advisor to understand which treatment is right for you — completely confidential."
     },
     "whatsappCta": {
       "label": "WhatsApp Call",
@@ -88,7 +85,7 @@
     }
   },
   "compliance": {
-    "heading": "Compliance Notice",
+    "heading": "Your Privacy & Our Commitment",
     "bullets": [
       "Your details are kept completely confidential",
       "Our fertility advisor will guide you without obligation",

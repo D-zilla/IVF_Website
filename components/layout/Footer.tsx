@@ -11,7 +11,7 @@ export function Footer({ content }: FooterProps) {
   return (
     <footer className="bg-brand-footer pb-8 pt-16 text-white">
       <div className="mx-auto max-w-site px-6">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           {/* Brand */}
           <div>
             <Link href="/" aria-label={`${content.brand.name} home`} className="inline-flex">
@@ -27,9 +27,6 @@ export function Footer({ content }: FooterProps) {
               {content.description}
             </p>
           </div>
-
-          <FooterColumn column={content.quickLinks} />
-          <FooterColumn column={content.services} />
 
           <div>
             <h2 className="mb-[22px] text-[22px] font-bold">{content.contact.title}</h2>
@@ -64,22 +61,5 @@ export function Footer({ content }: FooterProps) {
         <div className="text-center text-sm text-[#c4cad8]">{content.copyright}</div>
       </div>
     </footer>
-  );
-}
-
-function FooterColumn({ column }: { column: FooterContent["quickLinks"] }) {
-  return (
-    <div>
-      <h2 className="mb-[22px] text-[22px] font-bold">{column.title}</h2>
-      <ul className="flex flex-col gap-3.5 text-[15px] text-[#dfe3ee]">
-        {column.links.map((link, i) => (
-          <li key={`${link.href}-${i}`}>
-            <Link href={link.href} className="hover:text-brand-orange">
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }

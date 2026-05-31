@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { TrustSectionContent } from "@/lib/types";
-import { CheckIcon, PersonalCareIcon } from "@/components/ui/icons";
+import { CheckIcon } from "@/components/ui/icons";
+import { FeatureIcon } from "@/components/ui/FeatureIcon";
 
 export interface TrustSectionProps {
   content: TrustSectionContent;
@@ -57,11 +57,10 @@ export function TrustSection({ content }: TrustSectionProps) {
                   key={h.title}
                   className="flex h-[120px] flex-col items-center justify-center gap-3 rounded-card bg-brand-orange transition hover:-translate-y-1"
                 >
-                  {h.iconSrc ? (
-                    <Image src={h.iconSrc} alt="" width={42} height={42} sizes="42px" />
-                  ) : (
-                    <PersonalCareIcon className="h-[42px] w-[42px] fill-white" aria-hidden="true" />
-                  )}
+                  <FeatureIcon
+                    name={h.icon ?? "care"}
+                    className="h-[42px] w-[42px] text-white"
+                  />
                   <span className="text-base font-bold">{h.title}</span>
                 </li>
               ))}
