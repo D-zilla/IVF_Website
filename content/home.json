@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Best IVF Centre in Kathmandu, Nepal | Alchemy IVF & Fertility Clinic",
-    "description": "Alchemy IVF is a leading fertility clinic in Kathmandu, Nepal offering IVF, IUI, ICSI, donor programs and fertility preservation. Expert doctors, world-class embryology lab and personalised care. Book a free consultation today.",
+    "title": "Trusted IVF & Fertility Consultancy in Kathmandu | Alchemy IVF",
+    "description": "Alchemy IVF is a trusted fertility consultancy in Kathmandu, Nepal. Our experts guide you through IVF, IUI, ICSI, donor programs and fertility preservation — with honest advice, personalised plans and access to the right specialists. Book a free consultation today.",
     "canonical": "/"
   },
   "hero": {
-    "eyebrow": "Fertility & IVF Centre in Kathmandu",
-    "title": "Alchemy IVF — Where Science Meets Miracles",
-    "description": "From your first consultation to a positive pregnancy test, Alchemy IVF guides couples through every step of their fertility journey. With a world-class embryology lab, experienced IVF specialists and personalised treatment plans, we turn the hope of parenthood into reality.",
+    "eyebrow": "Fertility Service Provider in Kathmandu",
+    "title": "Advanced Fertility Solutions for Couples",
+    "description": "Alchemy IVF provides expert fertility consultation, reproductive wellness guidance, gyno support, treatment facilitation and compassionate care for couples on their journey to parenthood — with trusted facilitation and dedicated support at every step.",
     "stats": [
       { "value": "20+", "label": "Years of experience" },
       { "value": "5K+", "label": "Happy families" },
@@ -23,61 +23,54 @@
     }
   },
   "specialties": {
-    "heading": "Our Fertility Treatments & Specialties",
+    "heading": "Our Fertility Services",
     "items": [
       {
-        "title": "IVF",
-        "description": "Advanced in-vitro fertilisation with high success rates for couples facing blocked tubes, low ovarian reserve or unexplained infertility.",
-        "ctaLabel": "Learn about IVF",
+        "title": "Fertility Consultation",
+        "description": "Expert one-on-one consultation to understand your fertility, explain your options clearly and plan the right path forward.",
+        "ctaLabel": "Book a consultation",
         "href": "/contact",
-        "icon": "ivf"
+        "icon": "consultation"
       },
       {
-        "title": "IUI",
-        "description": "Affordable intrauterine insemination — a safe, minimally invasive first-line fertility treatment for eligible couples.",
-        "ctaLabel": "Learn about IUI",
+        "title": "Reproductive Wellness Guidance",
+        "description": "Personalised guidance on lifestyle, nutrition and reproductive health to give you the best possible foundation for conception.",
+        "ctaLabel": "Get wellness guidance",
         "href": "/contact",
-        "icon": "iui"
+        "icon": "wellness"
       },
       {
-        "title": "ICSI",
-        "description": "Precise single-sperm injection (ICSI) that treats severe male-factor infertility and improves fertilisation rates.",
-        "ctaLabel": "Learn about ICSI",
+        "title": "Gyno Support",
+        "description": "Trusted gynaecological support and advice, connecting you with the right specialists for your individual needs.",
+        "ctaLabel": "Get gyno support",
         "href": "/contact",
-        "icon": "icsi"
+        "icon": "gyno"
       },
       {
-        "title": "Donor Program",
-        "description": "Fully screened egg, sperm and embryo donor programs, managed ethically and with complete confidentiality.",
-        "ctaLabel": "Explore donor options",
+        "title": "Treatment Facilitation",
+        "description": "End-to-end facilitation of IVF, IUI, ICSI and donor treatments — coordinating trusted specialists and facilities on your behalf.",
+        "ctaLabel": "Explore treatment options",
         "href": "/contact",
-        "icon": "donor"
-      },
-      {
-        "title": "Fertility Preservation",
-        "description": "Egg, sperm and embryo freezing (cryopreservation) to protect your future family planning, including before cancer treatment.",
-        "ctaLabel": "Learn about fertility preservation",
-        "href": "/contact",
-        "icon": "preservation"
+        "icon": "facilitation"
       }
     ]
   },
   "trust": {
     "heading": "Why Couples Across Nepal Trust Alchemy IVF",
-    "description": "We understand that every fertility journey is unique. At Alchemy IVF in Kathmandu, our specialists combine internationally accredited lab protocols with genuine, compassionate care — so you feel informed, supported and confident at every stage of your treatment.",
+    "description": "We understand that every fertility journey is unique. As a dedicated fertility service provider in Kathmandu, Alchemy IVF offers expert counselling, trusted facilitation and personalised guidance — connecting you with the right specialists and facilities, so you feel informed, supported and confident at every step.",
     "points": [
       "Your privacy and confidentiality are our priority",
-      "Advanced embryology lab & assisted-reproduction technology",
+      "Expert guidance backed by trusted, accredited facilities",
       "Proven, real patient success stories",
       "Transparent process and upfront, honest pricing"
     ],
     "highlights": [
       { "title": "Personal Care", "icon": "care" },
-      { "title": "Modern Labs", "icon": "labs" },
-      { "title": "Skilled Embryologists", "icon": "ovum" },
+      { "title": "Trusted Facilities", "icon": "labs" },
+      { "title": "Expert Specialists", "icon": "ovum" },
       { "title": "Counselling Support", "icon": "counselling" },
-      { "title": "Genetic Screening", "icon": "genetics" },
-      { "title": "Aftercare Program", "icon": "aftercare" }
+      { "title": "Treatment Guidance", "icon": "genetics" },
+      { "title": "Aftercare Support", "icon": "aftercare" }
     ],
     "primaryCta": { "label": "Book Appointment", "href": "/contact" },
     "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" }
@@ -123,7 +116,7 @@
       {
         "poster": { "src": "/images/story-thumb.png", "alt": "Doctor in a clinic with a patient" },
         "videoUrl": "https://www.youtube.com/watch?v=placeholder3",
-        "caption": "Inside our embryology lab"
+        "caption": "Understanding the IVF process"
       },
       {
         "poster": { "src": "/images/story-thumb.png", "alt": "Smiling parents with their baby" },
@@ -147,13 +140,13 @@
     "heading": "Why Choose Alchemy IVF in Kathmandu?",
     "features": [
       {
-        "title": "Expert Fertility Doctors",
-        "description": "Experienced IVF specialists and embryologists guiding every cycle",
+        "title": "Expert Fertility Guidance",
+        "description": "Experienced fertility consultants guiding you through every decision",
         "icon": "doctors"
       },
       {
-        "title": "International Lab Standards",
-        "description": "Accredited embryology lab and global assisted-reproduction protocols",
+        "title": "Trusted Partner Facilities",
+        "description": "Access to accredited labs and specialists following global standards",
         "icon": "labs"
       },
       {
@@ -196,14 +189,14 @@
         "author": "Rajesh Maharjan",
         "timeAgo": "2 months ago",
         "rating": 5,
-        "body": "Travelled from Pokhara for treatment. Their team arranged everything — appointment scheduling, follow-ups over phone, even hotel suggestions. Very professional and the lab looks world-class. Worth every rupee.",
+        "body": "Travelled from Pokhara and their team arranged everything — appointment scheduling, follow-ups over phone, even hotel suggestions. They connected us with an excellent specialist and guided us at every step. Very professional. Worth it.",
         "sourceLabel": "Google"
       },
       {
         "author": "Pramila Thapa",
         "timeAgo": "3 months ago",
         "rating": 4,
-        "body": "Genuinely caring doctors and a clean, modern clinic. The treatment process was explained well and the staff are very supportive. Only suggestion is that the waiting time can be a bit long on busy days, but the care makes up for it.",
+        "body": "Genuinely caring team. They explained the whole process clearly, gave honest advice without any pressure, and the staff are very supportive. Only suggestion is that callbacks can take a little longer on busy days, but the guidance makes up for it.",
         "sourceLabel": "Google"
       }
     ]
@@ -213,19 +206,19 @@
     "items": [
       {
         "question": "What is IVF and how does it work?",
-        "answer": "IVF (in-vitro fertilisation) is a fertility treatment where eggs are collected from the ovaries and fertilised with sperm in our embryology lab. The resulting embryo is cultured for a few days and then transferred into the uterus. At Alchemy IVF in Kathmandu, every IVF cycle is tailored to your diagnosis to give you the best possible chance of pregnancy."
+        "answer": "IVF (in-vitro fertilisation) is a fertility treatment where eggs are collected from the ovaries and fertilised with sperm in a specialist lab. The resulting embryo is cultured for a few days and then transferred into the uterus. At Alchemy IVF in Kathmandu, our experts assess your situation, explain your options clearly and create a personalised plan — guiding you to the right treatment for the best possible chance of pregnancy."
       },
       {
-        "question": "Which fertility conditions does Alchemy IVF treat?",
-        "answer": "We treat the full range of male and female infertility, including blocked fallopian tubes, PCOS, endometriosis, low ovarian reserve, low sperm count or motility, recurrent pregnancy loss and unexplained infertility. After a thorough evaluation, our specialists recommend the most effective treatment — IVF, IUI, ICSI or a donor program."
+        "question": "Which fertility conditions can Alchemy IVF help with?",
+        "answer": "We guide couples through the full range of male and female infertility, including blocked fallopian tubes, PCOS, endometriosis, low ovarian reserve, low sperm count or motility, recurrent pregnancy loss and unexplained infertility. After a thorough evaluation, our experts recommend the most effective path forward — IVF, IUI, ICSI or a donor program — and connect you with the right specialists."
       },
       {
         "question": "How long does one IVF cycle take?",
         "answer": "A typical IVF cycle takes about four to six weeks from the start of ovarian stimulation to embryo transfer. If we recommend a frozen embryo transfer, that may be scheduled in a later cycle. We share a clear, week-by-week timeline at your first consultation."
       },
       {
-        "question": "What is the IVF success rate at your clinic in Nepal?",
-        "answer": "IVF success rates depend on age, diagnosis, egg and sperm quality, and the treatment plan. Rather than quote a single number, our doctors share realistic, clinic-specific success rates for couples with a profile similar to yours during your consultation — so you can make an informed decision."
+        "question": "What is the IVF success rate in Nepal?",
+        "answer": "IVF success rates depend on age, diagnosis, egg and sperm quality, and the treatment plan. Rather than quote a single number, our experts share realistic success rates for couples with a profile similar to yours during your consultation — so you can make a fully informed decision."
       },
       {
         "question": "What is the difference between IVF, IUI and ICSI?",
@@ -236,18 +229,18 @@
         "answer": "We believe in transparent, upfront pricing. The final cost of IVF depends on your medication, the number of cycles and any add-ons such as ICSI or PGT-A genetic testing. Our team provides a clear, written estimate before you commit — with no hidden charges."
       },
       {
-        "question": "Do you offer donor eggs, donor sperm and fertility preservation?",
-        "answer": "Yes. We run a fully screened donor egg, donor sperm and donor embryo program with thorough medical, genetic and infectious-disease testing. We also offer fertility preservation — egg, sperm and embryo freezing — including fast-track options for patients before cancer treatment."
+        "question": "Can you help with donor eggs, donor sperm and fertility preservation?",
+        "answer": "Yes. We guide couples through fully screened donor egg, donor sperm and donor embryo options, with thorough medical, genetic and infectious-disease testing carried out by trusted partner facilities. We also advise on fertility preservation — egg, sperm and embryo freezing — including fast-track options before cancer treatment."
       },
       {
         "question": "Do you support international and out-of-town patients?",
-        "answer": "Absolutely. Our medical tourism desk assists patients travelling to Kathmandu with visa support letters, airport pickup, hotel bookings and remote follow-up consultations, so your fertility treatment is as smooth and stress-free as possible."
+        "answer": "Absolutely. Our medical tourism desk assists patients travelling to Kathmandu with visa support letters, airport pickup, hotel bookings and remote follow-up consultations, so your whole fertility journey is as smooth and stress-free as possible."
       }
     ]
   },
   "cta": {
     "heading": "Ready to Start Your Parenthood Journey?",
-    "description": "Take the first step towards parenthood with the fertility specialists at Alchemy IVF, Kathmandu. Book a free, confidential consultation and get a personalised treatment plan built around your needs.",
+    "description": "Take the first step with the fertility experts at Alchemy IVF, Kathmandu. Book a free, confidential consultation and get honest guidance, trusted facilitation and a personalised plan built around your needs.",
     "primaryCta": { "label": "Book Free Consultation", "href": "/contact" },
     "secondaryCta": { "label": "Call Us Now", "href": "tel:+9779828528805" },
     "trustItems": ["100% Confidential", "Expert Fertility Specialists", "Personalised Care"]

@@ -8,15 +8,26 @@ export interface MedicalClinicArgs {
   imagePath?: string;
 }
 
+// Sitewide organisation schema. Alchemy IVF is an advisory/consultancy
+// business, so it is modelled as a ProfessionalService (not a MedicalClinic).
 export function medicalClinicSchema({ site, imagePath = "/images/hero-hands.png" }: MedicalClinicArgs) {
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
+    "@type": "ProfessionalService",
     name: SITE_NAME,
     url: SITE_URL,
     image: `${SITE_URL}${imagePath}`,
     description:
-      "Alchemy IVF is a leading fertility and IVF clinic in Kathmandu, Nepal, offering IVF, IUI, ICSI, donor egg/sperm programs and fertility preservation with an internationally accredited embryology lab.",
+      "Alchemy IVF is a trusted fertility service provider in Kathmandu, Nepal, offering expert fertility consultation, reproductive wellness guidance, gyno support and treatment facilitation for couples on their journey to parenthood.",
+    areaServed: "Nepal",
+    knowsAbout: [
+      "IVF",
+      "IUI",
+      "ICSI",
+      "Fertility preservation",
+      "Donor programs",
+      "Infertility",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: site.topBar.location.split(",")[0]?.trim(),
@@ -30,7 +41,6 @@ export function medicalClinicSchema({ site, imagePath = "/images/hero-hands.png"
       contactType: "customer service",
       areaServed: p.label,
     })),
-    medicalSpecialty: "Reproductive Endocrinology",
   };
 }
 

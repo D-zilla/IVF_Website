@@ -55,13 +55,15 @@ export function TrustSection({ content }: TrustSectionProps) {
               {content.highlights.map((h) => (
                 <li
                   key={h.title}
-                  className="flex h-[120px] flex-col items-center justify-center gap-3 rounded-card bg-brand-orange transition hover:-translate-y-1"
+                  className="flex h-[120px] flex-col items-center justify-center gap-3 rounded-card bg-brand-orange px-3 text-center transition hover:-translate-y-1"
                 >
                   <FeatureIcon
                     name={h.icon ?? "care"}
-                    className="h-[42px] w-[42px] text-white"
+                    className="h-[42px] w-[42px] shrink-0 text-white"
                   />
-                  <span className="text-base font-bold">{h.title}</span>
+                  <span className="text-center text-base font-bold leading-tight">
+                    {h.title}
+                  </span>
                 </li>
               ))}
             </ul>

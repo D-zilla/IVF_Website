@@ -15,7 +15,7 @@ export function SpecialtiesGrid({ content }: SpecialtiesGridProps) {
         >
           {content.heading}
         </h2>
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {content.items.map((item) => (
             <li key={item.title}>
               <SpecialtyCard item={item} />

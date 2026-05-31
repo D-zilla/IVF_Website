@@ -9,6 +9,8 @@ import {
   FaDna,
   FaComments,
   FaShieldHeart,
+  FaSeedling,
+  FaVenus,
 } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 import { EmbryoIcon, MicroInjectionIcon, OvumIcon } from "./icons";
@@ -24,7 +26,13 @@ import { EmbryoIcon, MicroInjectionIcon, OvumIcon } from "./icons";
 type IconComponent = (p: { className?: string }) => React.ReactElement;
 
 const registry: Record<string, IconComponent> = {
-  // Specialties
+  // Service pillars
+  consultation: (p) => <FaComments {...p} />,
+  wellness: (p) => <FaSeedling {...p} />,
+  gyno: (p) => <FaVenus {...p} />,
+  facilitation: (p) => <FaHandHoldingMedical {...p} />,
+
+  // Treatments (referenced elsewhere / future use)
   ivf: (p) => <EmbryoIcon {...p} />,
   iui: (p) => <FaSyringe {...p} />,
   icsi: (p) => <MicroInjectionIcon {...p} />,
