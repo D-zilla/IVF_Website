@@ -35,7 +35,18 @@ export function Footer({ content }: FooterProps) {
                 <BuildingIcon className="mt-0.5 h-[22px] w-[22px] shrink-0 fill-white" aria-hidden="true" />
                 <div className="text-[15px] font-medium">
                   <span className="sr-only">{content.contact.address.label}: </span>
-                  {content.contact.address.value}
+                  {content.contact.address.href ? (
+                    <a
+                      href={content.contact.address.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-brand-orange"
+                    >
+                      {content.contact.address.value}
+                    </a>
+                  ) : (
+                    content.contact.address.value
+                  )}
                 </div>
               </div>
               {content.contact.phones.map((phone) => (

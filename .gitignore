@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project docs / agent instructions (kept local, not versioned)
+CLAUDE.md
+IMPLEMENTATION-REPORT.md
