@@ -8,6 +8,8 @@ export interface HeroImageProps {
 }
 
 export function HeroImage({ content }: HeroImageProps) {
+  const primaryExternal = content.primaryCta.href.startsWith("http");
+  const PrimaryTag = primaryExternal ? "a" : Link;
   const secondaryExternal = content.secondaryCta?.href.startsWith("http");
   return (
     <section id="about" aria-labelledby="hero-title" className="pt-9">
@@ -39,13 +41,13 @@ export function HeroImage({ content }: HeroImageProps) {
               ))}
             </dl>
             <div className="flex flex-wrap gap-3.5">
-              <Link
+              <PrimaryTag
                 href={content.primaryCta.href}
                 className="inline-flex items-center gap-2.5 rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-orange shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)]"
               >
                 <CalendarIcon className="h-[18px] w-[18px]" aria-hidden="true" />
                 {content.primaryCta.label}
-              </Link>
+              </PrimaryTag>
               {content.secondaryCta && (
                 <a
                   href={content.secondaryCta.href}

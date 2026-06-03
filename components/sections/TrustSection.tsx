@@ -8,6 +8,8 @@ export interface TrustSectionProps {
 }
 
 export function TrustSection({ content }: TrustSectionProps) {
+  const primaryExternal = content.primaryCta.href.startsWith("http");
+  const PrimaryTag = primaryExternal ? "a" : Link;
   const secondaryExternal = content.secondaryCta?.href.startsWith("http");
   return (
     <section aria-labelledby="trust-heading" className="bg-white py-16">
@@ -32,12 +34,12 @@ export function TrustSection({ content }: TrustSectionProps) {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3.5">
-                <Link
+                <PrimaryTag
                   href={content.primaryCta.href}
                   className="inline-flex items-center rounded-card bg-white px-[26px] py-[13px] text-base font-bold text-brand-orange transition hover:-translate-y-0.5"
                 >
                   {content.primaryCta.label}
-                </Link>
+                </PrimaryTag>
                 {content.secondaryCta && (
                   <a
                     href={content.secondaryCta.href}

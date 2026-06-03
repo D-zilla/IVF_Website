@@ -8,7 +8,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { HeroImage } from "@/components/sections/HeroImage";
 import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { SpecialtiesGrid } from "@/components/sections/SpecialtiesGrid";
-import { TestimonialVideoGallery } from "@/components/sections/TestimonialVideoGallery";
+// import { TestimonialVideoGallery } from "@/components/sections/TestimonialVideoGallery"; // section hidden for now
 import { TrustSection } from "@/components/sections/TrustSection";
 import { WhyChooseSection } from "@/components/sections/WhyChooseSection";
 import homeContent from "@/content/home.json";
@@ -27,7 +27,8 @@ export default function HomePage() {
       <SpecialtiesGrid content={content.specialties} />
       <TrustSection content={content.trust} />
       <DoctorsGrid content={content.doctors} />
-      <TestimonialVideoGallery content={content.testimonials} />
+      {/* Hidden for now — "Real IVF Success Stories From Our Happy Couples" */}
+      {/* <TestimonialVideoGallery content={content.testimonials} /> */}
       <WhyChooseSection content={content.whyChoose} />
       <ReviewsCarousel content={content.reviews} />
       <FAQAccordion content={content.faq} />

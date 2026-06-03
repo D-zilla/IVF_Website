@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { CalendlyPopup } from "@/components/CalendlyPopup";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -79,6 +80,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <Footer content={content.footer} />
         <WhatsAppFloat content={content.whatsapp} />
+        <CalendlyPopup />
         <JsonLd data={clinicSchema} id="ld-medical-clinic" />
       </body>
     </html>

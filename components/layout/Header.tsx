@@ -11,6 +11,8 @@ export interface HeaderProps {
 
 export function Header({ content }: HeaderProps) {
   const [open, setOpen] = useState(false);
+  const ctaExternal = content.ctaHref.startsWith("http");
+  const CtaTag = ctaExternal ? "a" : Link;
 
   useEffect(() => {
     if (!open) return;
@@ -51,12 +53,12 @@ export function Header({ content }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
+          <CtaTag
             href={content.ctaHref}
             className="inline-flex items-center justify-center rounded-card bg-brand-orange px-5 py-2.5 text-sm font-bold text-white shadow-[0_6px_16px_rgba(239,118,35,0.28)] transition hover:-translate-y-0.5 hover:bg-brand-orangeDark sm:px-[30px] sm:py-[13px] sm:text-base"
           >
             {content.ctaLabel}
-          </Link>
+          </CtaTag>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}

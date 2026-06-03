@@ -257,12 +257,17 @@ export interface ConsultationFormField {
   inputMode?: "text" | "tel" | "email" | "numeric";
   pattern?: string;
   maxLength?: number;
+  /** Google Forms entry id (e.g. "entry.257426540") this field maps to. */
+  entryId?: string;
 }
 
 export interface ConsultationFormContent {
   title: string;
   fields: ConsultationFormField[];
   submitLabel: string;
+  sendingLabel?: string;
+  successMessage?: string;
+  errorMessage?: string;
   reassurance: string;
   disclaimer: string;
   action?: string;

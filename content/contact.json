@@ -25,7 +25,7 @@
     "features": [
       {
         "icon": "calendar",
-        "title": "20+ Years",
+        "title": "10+ Years",
         "subtitle": "Of Fertility Experience"
       },
       {
@@ -41,30 +41,40 @@
     ],
     "form": {
       "title": "Get a Free Consultation",
+      "action": "https://docs.google.com/forms/d/e/1FAIpQLSeU3GTlcdw4eN8zwOv5_St1Eg6-5xBFMluFBGtE6zlgBe0LkA/formResponse",
       "fields": [
         {
           "name": "name",
           "label": "Your Name",
           "placeholder": "Full Name",
           "required": true,
-          "type": "text"
+          "type": "text",
+          "entryId": "entry.257426540"
         },
         {
           "name": "phone",
           "label": "Phone / WhatsApp Number",
-          "placeholder": "10-digit mobile number",
+          "placeholder": "Include country code, e.g. +977 98XXXXXXXX",
           "required": true,
           "type": "tel",
           "inputMode": "tel",
-          "pattern": "[0-9]{10}",
-          "maxLength": 10
+          "entryId": "entry.1224781617"
         },
         {
           "name": "city",
           "label": "City",
-          "placeholder": "e.g. Kathmandu, Pokhara",
+          "placeholder": "e.g. Kathmandu, Dubai, London",
           "required": true,
-          "type": "text"
+          "type": "text",
+          "entryId": "entry.387555249"
+        },
+        {
+          "name": "country",
+          "label": "Country",
+          "placeholder": "e.g. Nepal, UAE, UK",
+          "required": true,
+          "type": "text",
+          "entryId": "entry.1023804554"
         },
         {
           "name": "email",
@@ -72,10 +82,14 @@
           "placeholder": "Email address",
           "required": false,
           "type": "email",
-          "inputMode": "email"
+          "inputMode": "email",
+          "entryId": "entry.114618397"
         }
       ],
       "submitLabel": "Get a Free Consultation",
+      "sendingLabel": "Sending…",
+      "successMessage": "Thank you for reaching out — we'll contact you soon.",
+      "errorMessage": "Something went wrong sending your request. Please try again or call us directly.",
       "reassurance": "Your information is 100% secure and confidential. Our team will call you back within 15 minutes.",
       "disclaimer": "Free consultation, no obligation: Speak with a fertility advisor to understand which treatment is right for you — completely confidential."
     },

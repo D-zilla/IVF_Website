@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { HeroFormContent, HeroFormFeature } from "@/lib/types";
 import { ConsultationForm } from "./ConsultationForm";
 import {
@@ -47,15 +46,10 @@ function LandingCard({ content }: { content: HeroFormContent }) {
         {content.trust.badgeLabel}
       </span>
 
-      <div className="mb-3.5 flex items-center" aria-label="Patient avatars">
-        {content.trust.avatars.map((avatar, i) => (
-          <div
-            key={i}
-            className="relative -ml-2.5 h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-[0_1px_4px_rgba(0,0,0,0.15)] first:ml-0"
-          >
-            <Image src={avatar.src} alt={avatar.alt} fill sizes="40px" className="object-cover" />
-          </div>
-        ))}
+      <div className="mb-3.5 flex items-center gap-2.5">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-orangeBg">
+          <UsersDuoIcon className="h-5 w-5 fill-brand-orange" aria-hidden="true" />
+        </span>
       </div>
 
       <div className="mb-[18px] flex items-center gap-2.5">

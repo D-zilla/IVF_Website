@@ -1,13 +1,20 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import type { ConsultationFormContent, ConsultationFormField } from "@/lib/types";
 import { SendIcon, ShieldCheckIcon, PhoneIcon } from "@/components/ui/icons";
+import { Toast, type ToastVariant } from "@/components/ui/Toast";
 
 export interface ConsultationFormProps {
   content: ConsultationFormContent;
   className?: string;
 }
+
+const DEFAULT_SUCCESS = "Thank you for reaching out — we'll contact you soon.";
+const DEFAULT_ERROR =
+  "Something went wrong sending your request. Please try again or call us directly.";
+/** How long the button stays in its "sent" state before resetting. */
+const SUCCESS_RESET_MS = 4000;
 
 function validateField(field: ConsultationFormField, value: string): boolean {
   const v = value.trim();
@@ -24,17 +31,57 @@ export function ConsultationForm({ content, className }: ConsultationFormProps) 
   );
   const [errors, setErrors] = useState<Record<string, boolean>>({});
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ message: string; variant: ToastVariant } | null>(null);
+  const resetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  function handleSubmit(e: FormEvent) {
+  const successMessage = content.successMessage ?? DEFAULT_SUCCESS;
+  const errorMessage = content.errorMessage ?? DEFAULT_ERROR;
+
+  function handleSuccess() {
+    setSent(true);
+    setValues(Object.fromEntries(content.fields.map((f) => [f.name, ""])));
+    setToast({ message: successMessage, variant: "success" });
+    // Return the button to its original state after a short pause.
+    if (resetTimer.current) clearTimeout(resetTimer.current);
+    resetTimer.current = setTimeout(() => setSent(false), SUCCESS_RESET_MS);
+  }
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    if (submitting) return;
+
     const next: Record<string, boolean> = {};
     content.fields.forEach((f) => {
       if (!validateField(f, values[f.name])) next[f.name] = true;
     });
     setErrors(next);
-    if (Object.keys(next).length === 0) {
-      setSent(true);
-      setValues(Object.fromEntries(content.fields.map((f) => [f.name, ""])));
+    if (Object.keys(next).length > 0) return;
+
+    // No action configured — fall back to local success (e.g. previews).
+    if (!content.action) {
+      handleSuccess();
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const body = new FormData();
+      content.fields.forEach((f) => {
+        if (f.entryId) body.append(f.entryId, values[f.name].trim());
+      });
+      // Google Forms blocks CORS reads; no-cors fires the request and we
+      // treat completion as success (response is opaque by design).
+      await fetch(content.action, {
+        method: "POST",
+        mode: "no-cors",
+        body,
+      });
+      handleSuccess();
+    } catch {
+      setToast({ message: errorMessage, variant: "error" });
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -81,12 +128,16 @@ export function ConsultationForm({ content, className }: ConsultationFormProps) 
 
         <button
           type="submit"
-          className={`flex w-full items-center justify-center gap-2.5 rounded-card px-4 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 ${
+          disabled={submitting}
+          aria-busy={submitting}
+          className={`flex w-full items-center justify-center gap-2.5 rounded-card px-4 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 ${
             sent ? "bg-brand-green" : "bg-brand-orange hover:bg-brand-orangeDark"
           }`}
         >
           {sent ? (
-            "✓ Request Sent — We'll call you within 15 minutes"
+            `✓ ${successMessage}`
+          ) : submitting ? (
+            content.sendingLabel ?? "Sending…"
           ) : (
             <>
               <SendIcon className="h-[18px] w-[18px] fill-white" aria-hidden="true" />
@@ -105,6 +156,12 @@ export function ConsultationForm({ content, className }: ConsultationFormProps) 
           <span>{content.disclaimer}</span>
         </div>
       </form>
+
+      <Toast
+        message={toast?.message ?? null}
+        variant={toast?.variant}
+        onDismiss={() => setToast(null)}
+      />
     </div>
   );
 }

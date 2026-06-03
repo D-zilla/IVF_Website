@@ -9,11 +9,10 @@
     "title": "Advanced Fertility Solutions for Couples",
     "description": "Alchemy IVF provides expert fertility consultation, reproductive wellness guidance, gyno support, treatment facilitation and compassionate care for couples on their journey to parenthood — with trusted facilitation and dedicated support at every step.",
     "stats": [
-      { "value": "20+", "label": "Years of experience" },
-      { "value": "5K+", "label": "Happy families" },
-      { "value": "95%", "label": "Patient satisfaction" }
+      { "value": "10+", "label": "Years of experience" },
+      { "value": "5K+", "label": "Happy families" }
     ],
-    "primaryCta": { "label": "Book Appointment", "href": "/contact" },
+    "primaryCta": { "label": "Book Appointment", "href": "https://calendly.com/alchemyivfnepal/30min" },
     "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" },
     "image": {
       "src": "/images/hero-hands.png",
@@ -72,7 +71,7 @@
       { "title": "Treatment Guidance", "icon": "genetics" },
       { "title": "Aftercare Support", "icon": "aftercare" }
     ],
-    "primaryCta": { "label": "Book Appointment", "href": "/contact" },
+    "primaryCta": { "label": "Book Appointment", "href": "https://calendly.com/alchemyivfnepal/30min" },
     "secondaryCta": { "label": "WhatsApp Call", "href": "https://wa.me/9779828528805" }
   },
   "doctors": {
@@ -241,7 +240,7 @@
   "cta": {
     "heading": "Ready to Start Your Parenthood Journey?",
     "description": "Take the first step with the fertility experts at Alchemy IVF, Kathmandu. Book a free, confidential consultation and get honest guidance, trusted facilitation and a personalised plan built around your needs.",
-    "primaryCta": { "label": "Book Free Consultation", "href": "/contact" },
+    "primaryCta": { "label": "Book Free Consultation", "href": "https://calendly.com/alchemyivfnepal/30min" },
     "secondaryCta": { "label": "Call Us Now", "href": "tel:+9779828528805" },
     "trustItems": ["100% Confidential", "Expert Fertility Specialists", "Personalised Care"]
   }
