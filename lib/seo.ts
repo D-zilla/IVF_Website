@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import type { PageMeta } from "./types";
 
-// TODO: replace with the real production domain before launch (used for
-// canonical URLs, Open Graph, sitemap and JSON-LD).
-export const SITE_URL = "https://example.com";
+// Production domain — used for canonical URLs, Open Graph, sitemap and JSON-LD.
+export const SITE_URL = "https://alchemyivf.com";
 export const SITE_NAME = "Alchemy IVF";
 export const DEFAULT_OG_IMAGE = {
   url: "/images/hero-hands.png",
