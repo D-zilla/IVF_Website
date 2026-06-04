@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { PageMeta } from "./types";
 
 // Production domain — used for canonical URLs, Open Graph, sitemap and JSON-LD.
-export const SITE_URL = "https://alchemyivf.com";
+export const SITE_URL = "https://www.alchemyivf.com";
 export const SITE_NAME = "Alchemy IVF";
 export const DEFAULT_OG_IMAGE = {
   url: "/images/hero-hands.png",
